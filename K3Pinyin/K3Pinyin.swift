@@ -21,7 +21,7 @@ public extension K3Pinyin {
     }
     
     func pinyin(_ options: K3PinyinOptions?) -> String {
-        func getFirstCharactor(_ source: String) -> String {
+        func getFirstLetter(_ source: String) -> String {
             guard base.count > 0 else {
                 return ""
             }
@@ -36,7 +36,7 @@ public extension K3Pinyin {
         
         var source = base
         if options != nil && (options!.onlyFirstCharactor || options!.onlyFirstLetter) {
-            source = getFirstCharactor(source)
+            source = getFirstLetter(source)
         }
         
         let cfString = CFStringCreateMutableCopy(nil, 0, source as CFString)
@@ -55,16 +55,16 @@ public extension K3Pinyin {
         var result: String = cfString! as String
         
         if cases.onlyFirstLetter {
-            result = getFirstCharactor(result)
+            result = getFirstLetter(result)
         }
         
         if cases.capitalized {
             result = result.capitalized
         }
         
-        if cases.allFirstCharactor || cases.stripWhitespace {
+        if cases.allFirstLetter || cases.stripWhitespace {
             result = result.split(separator: " ").map{
-                return cases.allFirstCharactor ? getFirstCharactor(String($0)) : String($0)
+                return cases.allFirstLetter ? getFirstLetter(String($0)) : String($0)
                 }
                 .joined(separator: cases.stripWhitespace ? "" : " ")
         }
@@ -96,12 +96,11 @@ extension String : k3PinyinCompatible {
 public typealias K3PinyinOptions = [K3PinyinOption]
 
 public enum K3PinyinOption {
-    case none
     case stripCombiningMarks
     case stripWhitespace
     case onlyFirstCharactor
-    case onlyFirstLetter
     case allFirstLetter
+    case onlyFirstLetter
     case capitalized
 }
 
@@ -118,12 +117,12 @@ public extension Collection where Iterator.Element == K3PinyinOption {
         return contains{$0 == .onlyFirstCharactor}
     }
     
-    var onlyFirstLetter: Bool {
-        return contains{$0 == .onlyFirstLetter}
+    var allFirstLetter: Bool {
+        return contains{$0 == .allFirstLetter}
     }
     
-    var allFirstCharactor: Bool {
-        return contains{$0 == .allFirstLetter}
+    var onlyFirstLetter: Bool {
+        return contains{$0 == .onlyFirstLetter}
     }
     
     var capitalized : Bool {

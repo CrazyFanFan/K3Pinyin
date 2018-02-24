@@ -11,6 +11,8 @@ import XCTest
 
 class K3PinyinTests: XCTestCase {
     
+    let string = "中国"
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -47,114 +49,92 @@ class K3PinyinTests: XCTestCase {
     
     // MARK: single option test
     func testToPinyin() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin, "zhōng guó")
     }
     
     func testStripCombiningMarks() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks]), "zhong guo")
     }
     
     
     func testStripWhitespace() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripWhitespace]), "zhōngguó")
     }
     
     func testOnlyFirstCharactor() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor]), "zhōng")
     }
     
     func testOnlyFirstLetter() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.onlyFirstLetter]), "z")
     }
     
     func testAllFirstCharactor() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.allFirstLetter]), "z g")
     }
     
     func testCapitalized() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.capitalized]), "Zhōng Guó")
     }
     
     // MARK: Combination two options test
     func testStripCombiningMarksAndStripWhitespace() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace]), "zhongguo")
     }
     
     func testStripCombiningMarksAndOnlyFirstCharactor() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor]), "zhong")
     }
     
     func testStripCombiningMarksAndOnlyFirstLetter() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstLetter]), "z")
     }
     
     func testStripCombiningMarksAndAllFirstLetter() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .allFirstLetter]), "z g")
     }
     
     func testStripCombiningMarksAndCapitalized() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .capitalized]), "Zhong Guo")
     }
     
     func testStripWhitespaceAndOnlyFirstCharactor() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor]), "zhōng")
     }
     
     func testStripWhitespaceAndOnlyFirstLetter() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstLetter]), "z")
     }
     
     func testStripWhitespaceAndAllFirstLetter() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .allFirstLetter]), "zg")
     }
     
     func testStripWhitespaceAndCapitalized() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .capitalized]), "ZhōngGuó")
     }
     
     func testOnlyFirstCharactorAndOnlyFirstLetter() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .onlyFirstLetter]), "z")
     }
     
     func testOnlyFirstCharactorAndAllFirstLetter() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .allFirstLetter]), "z")
     }
     
     func testOnlyFirstCharactorAndCapitalized() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .capitalized]), "Zhōng")
     }
     
     func testOnlyFirstLetterAndAllFirstLetter() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.onlyFirstLetter, .allFirstLetter]), "z")
     }
     
     func testOnlyFirstLetterAndCapitalized() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.onlyFirstLetter, .capitalized]), "Z")
     }
     
     func testAllFirstLetterAndCapitalized() {
-        let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.allFirstLetter, .capitalized]), "Z G")
     }
     
