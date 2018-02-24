@@ -1,0 +1,260 @@
+#FXDataBase
+sqlcipher/
+
+# sqlcipher
+Common/FSFoundationLib/FXDataBase/sqlcipher/Makefile
+Common/FSFoundationLib/FXDataBase/sqlcipher/config.log
+Common/FSFoundationLib/FXDataBase/sqlcipher/config.status
+Common/FSFoundationLib/FXDataBase/sqlcipher/libtool
+# Weex
+Common/Weex/examples/build
+# OS X
+.idea
+.DS_Store
+
+# commit template
+fs_template
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+profile
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+
+# Bundler
+.bundle
+
+#xcode.workspace.scheme&plist
+xcuserdata
+
+Carthage
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+# 
+# Note: if you ignore the Pods directory, make sure to uncomment
+# `pod install` in .travis.yml
+#
+# Pods/
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+
+# Gradle:
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# CMake
+cmake-build-debug/
+
+# Mongo Explorer plugin:
+.idea/**/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Code Injection
+#
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
+Common/FSComPlatform/FSComCore/lib/*
+Common/FSSocketEngine/baseframe/lib/*
+Common/Monitor/FSSpeedTrack/lib/*
+Common/FSComPlatform/FSComCore/lib/*
+Common/FSSocketEngine/baseframe/lib/*
+Common/FSSocketEngine/engine/lib/*
+Common/FSFoundationLib/sqlcipher/config.log
+Common/FSFoundationLib/sqlcipher/config.status
+Common/FSFoundationLib/sqlcipher/libtool
+Common/FSFoundationLib/sqlcipher/Makefile
+Common/Service/FSSchemes/FSSchemes/FSNativeSchemes/FSChatCRMHighSeaListScheme.h
+Common/Service/FSSchemes/FSSchemes/FSNativeSchemes/FSChatCRMHighSeaListScheme.m
+Common/Service/FSSchemes/FSSchemes/FSNativeSchemes/FSChatCRMHighSeaRuleScheme.h
+Common/Service/FSSchemes/FSSchemes/FSNativeSchemes/FSChatCRMHighSeaRuleScheme.m
+Common/Weex/package-lock.json
+Crm/FCrm/FCrm/FCrmNewPayment/FCrmCreatePaymentHandler+FormComponentDelegate.h
+Crm/FCrm/FCrm/FCrmNewPayment/FCrmCreatePaymentHandler+FormComponentDelegate.m
+Crm/FCrm/FCrm/FCrmNewPayment/FCrmCreatePaymentHandler.h
+Crm/FCrm/FCrm/FCrmNewPayment/FCrmCreatePaymentHandler.m
+Crm/FCrm/FCrm/FCrmNewPayment/FCrmPaymentListConfig.h
+Crm/FCrm/FCrm/FCrmNewPayment/FCrmPaymentListConfig.m
+Crm/Paas/FSUnicorn/FSUnicorn/FSList/FSObjectListConfiguration.h
+Library/FSComCore/inc/FSRouterPageItem.h
+Library/FSJSAPI/dependencies.json
+Library/FSUnicorn/inc/FSObjectDetailDataPresenter.h
+Library/FSUnicorn/inc/FSObjectListConfiguration.h
+Message/FSChat/FSChat/FSChatEntity/FSChatEntity+FSExpert.h
+Message/FSChat/FSChat/FSChatEntity/FSChatEntity+FSExpert.m
+Resource/Image/Contact/Contact.xcassets/Contents.json
+Resource/Image/Contact/Contact.xcassets/profile_call_cell.imageset/profile_call_cell@3x.png
+Resource/Image/Contact/Contact.xcassets/profile_call_telephone.imageset/Contents.json
+Resource/Image/Contact/Contact.xcassets/profile_call_telephone.imageset/profile_call_telephone@2x.png
+Resource/Image/Contact/Contact.xcassets/profile_call_telephone.imageset/profile_call_telephone@3x.png
+Resource/Image/Contact/Contact.xcassets/profile_female_icon.imageset/profile_female_icon@3x.png
+Resource/Image/Contact/Contact.xcassets/profile_mail_cell.imageset/profile_mail_cell@3x.png
+Resource/Image/Contact/Contact.xcassets/profile_male_icon.imageset/profile_maie_icon@2x.png
+Resource/Image/Contact/Contact.xcassets/profile_male_icon.imageset/profile_maie_icon@3x.png
+Resource/images/ReplaceIcon/logo_jinmailang@2x.png
+Resource/images/ReplaceIcon/logo_jinmailang@3x.png
+Shenzhen/FSAppCenter/FSAppCenter/Model/UpdateCustomerExpertsResult.h
+Shenzhen/FSAppCenter/FSAppCenter/Model/UpdateCustomerExpertsResult.m
+Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSAppCenterEntity+ChatModel.h
+Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSAppCenterEntity+ChatModel.m
+Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSAppCenterEntity+Expert.h
+Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSAppCenterEntity+Expert.m
+Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSChatModelManager.h
+Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSChatModelManager.m
+Shenzhen/FSJSAPI/FSJSAPI/Processor/CRM/FSJSSelectContactProcessor.h
+Shenzhen/FSJSAPI/FSJSAPI/Processor/CRM/FSJSSelectContactProcessor.m
