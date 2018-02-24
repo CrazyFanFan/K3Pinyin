@@ -8,45 +8,11 @@
 
 import Foundation
 
-//public struct StringProxy {
-//    fileprivate let base: String
-//    init(proxy: String) {
-//        base = proxy
-//    }
-//}
-//
-//extension String: KingfisherCompatible {
-//    public typealias CompatibleType = StringProxy
-//    public var kf: CompatibleType {
-//        return StringProxy(proxy: self)
-//    }
-//}
-//
-//extension StringProxy {
-//    var md5: String {
-
-private var K3PinyinOptionsKey: Void?
-
 public struct K3Pinyin {
     fileprivate let base: String
     init(_ base: String) {
         self.base = base
     }
-}
-
-public protocol k3PinyinCompatible {
-    associatedtype CompatibleType
-    var k3: CompatibleType { get }
-}
-
-
-public extension k3PinyinCompatible {
-    public var k3: K3Pinyin {
-        get { return K3Pinyin(self as! String) }
-    }
-}
-
-extension String : k3PinyinCompatible {
 }
 
 public extension K3Pinyin {
@@ -69,7 +35,7 @@ public extension K3Pinyin {
         }
         
         var source = base
-        if options != nil && options!.onlyFirstCharactor {
+        if options != nil && (options!.onlyFirstCharactor || options!.onlyFirstLetter) {
             source = getFirstCharactor(source)
         }
         
@@ -88,6 +54,10 @@ public extension K3Pinyin {
         
         var result: String = cfString! as String
         
+        if cases.onlyFirstLetter {
+            result = getFirstCharactor(result)
+        }
+        
         if cases.capitalized {
             result = result.capitalized
         }
@@ -103,6 +73,26 @@ public extension K3Pinyin {
     }
 }
 
+
+// MARK: k3PinyinCompatible
+
+public protocol k3PinyinCompatible {
+    associatedtype CompatibleType
+    var k3: CompatibleType { get }
+}
+
+
+public extension k3PinyinCompatible {
+    public var k3: K3Pinyin {
+        get { return K3Pinyin(self as! String) }
+    }
+}
+
+extension String : k3PinyinCompatible {
+}
+
+// MARK: K3PinyinOptions
+
 public typealias K3PinyinOptions = [K3PinyinOption]
 
 public enum K3PinyinOption {
@@ -110,7 +100,8 @@ public enum K3PinyinOption {
     case stripCombiningMarks
     case stripWhitespace
     case onlyFirstCharactor
-    case allFirstCharactor
+    case onlyFirstLetter
+    case allFirstLetter
     case capitalized
 }
 
@@ -127,8 +118,12 @@ public extension Collection where Iterator.Element == K3PinyinOption {
         return contains{$0 == .onlyFirstCharactor}
     }
     
+    var onlyFirstLetter: Bool {
+        return contains{$0 == .onlyFirstLetter}
+    }
+    
     var allFirstCharactor: Bool {
-        return contains{$0 == .allFirstCharactor}
+        return contains{$0 == .allFirstLetter}
     }
     
     var capitalized : Bool {

@@ -21,10 +21,8 @@ class K3PinyinTests: XCTestCase {
         super.tearDown()
     }
     
+    // 和一个拼音库的资源进行对比，校验正确率，部分多音字Case无法通过
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-
         for (pinyin, str) in testPinyinMap {
             var s = str.startIndex
             while s < str.endIndex {
@@ -38,6 +36,7 @@ class K3PinyinTests: XCTestCase {
         }
     }
     
+    // 将全部字符进行一次取拼音操作，测试下性能
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
@@ -46,6 +45,7 @@ class K3PinyinTests: XCTestCase {
         }
     }
     
+    // MARK: single option test
     func testToPinyin() {
         let string = "中国"
         XCTAssertEqual(string.k3.pinyin, "zhōng guó")
@@ -54,5 +54,31 @@ class K3PinyinTests: XCTestCase {
     func testStripCombiningMarks() {
         let string = "中国"
         XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks]), "zhong guo")
+    }
+    
+    
+    func testStripWhitespace() {
+        let string = "中国"
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace]), "zhōngguó")
+    }
+    
+    func testOnlyFirstCharactor() {
+        let string = "中国"
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor]), "zhōng")
+    }
+    
+    func testOnlyFirstLetter() {
+        let string = "中国"
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstLetter]), "z")
+    }
+    
+    func testAllFirstCharactor() {
+        let string = "中国"
+        XCTAssertEqual(string.k3.pinyin([.allFirstLetter]), "z g")
+    }
+    
+    func testCapitalized() {
+        let string = "中国"
+        XCTAssertEqual(string.k3.pinyin([.capitalized]), "Zhōng Guó")
     }
 }
