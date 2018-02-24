@@ -138,4 +138,23 @@ class K3PinyinTests: XCTestCase {
         XCTAssertEqual(string.k3.pinyin([.allFirstLetter, .capitalized]), "Z G")
     }
     
+    
+    func testCombination() {
+        let t = combination([1, 2, 3, 4, 5])
+        print(t)
+    }
+    
+    private func combination<T>(_ items:[T]) -> [[T]] {
+        if items.count == 1 {
+            return [items]
+        }
+        
+        let moreCom = combination(Array(items[1...]))
+    
+        return ([[items[0]]] + moreCom.map { (singleCom) -> [T] in
+            var temCom = Array(singleCom)
+            temCom.insert(items[0], at: 0)
+            return temCom
+            } + moreCom)
+    }
 }
