@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F52085F20416845003C7F95 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F52085D20416844003C7F95 /* README.md */; };
+		4F52086020416845003C7F95 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4F52085E20416844003C7F95 /* LICENSE */; };
 		4F98214D2041391600CDAB85 /* K3Pinyin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9821432041391600CDAB85 /* K3Pinyin.framework */; };
 		4F9821522041391600CDAB85 /* K3PinyinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9821512041391600CDAB85 /* K3PinyinTests.swift */; };
 		4F9821542041391600CDAB85 /* K3Pinyin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9821462041391600CDAB85 /* K3Pinyin.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F52085D20416844003C7F95 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4F52085E20416844003C7F95 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4F9821432041391600CDAB85 /* K3Pinyin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = K3Pinyin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9821462041391600CDAB85 /* K3Pinyin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = K3Pinyin.h; sourceTree = "<group>"; };
 		4F9821472041391600CDAB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		4F9821392041391600CDAB85 = {
 			isa = PBXGroup;
 			children = (
+				4F52085E20416844003C7F95 /* LICENSE */,
+				4F52085D20416844003C7F95 /* README.md */,
 				4F9821452041391600CDAB85 /* K3Pinyin */,
 				4F9821502041391600CDAB85 /* K3PinyinTests */,
 				4F9821442041391600CDAB85 /* Products */,
@@ -186,6 +192,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F52086020416845003C7F95 /* LICENSE in Resources */,
+				4F52085F20416845003C7F95 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
