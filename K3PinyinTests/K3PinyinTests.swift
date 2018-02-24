@@ -24,11 +24,11 @@ class K3PinyinTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
+
         for (pinyin, str) in testPinyinMap {
             var s = str.startIndex
             while s < str.endIndex {
-                autoreleasepool(invoking: { 
+                autoreleasepool(invoking: {
                     let te = str.index(s, offsetBy: 1)
                     let char = String(str[s..<te])
                     XCTAssertEqual(pinyin.lowercased(), char.k3.pinyin, char+pinyin)
@@ -46,4 +46,13 @@ class K3PinyinTests: XCTestCase {
         }
     }
     
+    func testToPinyin() {
+        let string = "中国"
+        XCTAssertEqual(string.k3.pinyin, "zhōng guó")
+    }
+    
+    func testStripCombiningMarks() {
+        let string = "中国"
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks]), "zhong guo")
+    }
 }

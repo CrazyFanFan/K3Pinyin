@@ -29,7 +29,6 @@ private var K3PinyinOptionsKey: Void?
 
 public struct K3Pinyin {
     fileprivate let base: String
-    var options : K3PinyinOptions?
     init(_ base: String) {
         self.base = base
     }
@@ -50,12 +49,57 @@ public extension k3PinyinCompatible {
 extension String : k3PinyinCompatible {
 }
 
-extension K3Pinyin {
+public extension K3Pinyin {
     var pinyin: String {
-        let cfString = CFStringCreateMutableCopy(nil, 0, base as CFString)
+        return pinyin(nil)
+    }
+    
+    func pinyin(_ options: K3PinyinOptions?) -> String {
+        func getFirstCharactor(_ source: String) -> String {
+            guard base.count > 0 else {
+                return ""
+            }
+            let start = source.startIndex
+            let end = source.index(start, offsetBy: 1)
+            return String(source[start..<end])
+        }
+        
+        guard base.count > 0 else {
+            return ""
+        }
+        
+        var source = base
+        if options != nil && options!.onlyFirstCharactor {
+            source = getFirstCharactor(source)
+        }
+        
+        let cfString = CFStringCreateMutableCopy(nil, 0, source as CFString)
         CFStringTransform(cfString, nil, kCFStringTransformToLatin, false) // 有音标
-        CFStringTransform(cfString, nil, kCFStringTransformStripCombiningMarks, false) //无音标
-        return cfString! as String
+        
+        guard options != nil else {
+            return cfString! as String
+        }
+        
+        let cases = options!
+        
+        if cases.stripCombiningMarks {
+            CFStringTransform(cfString, nil, kCFStringTransformStripCombiningMarks, false) //无音标
+        }
+        
+        var result: String = cfString! as String
+        
+        if cases.capitalized {
+            result = result.capitalized
+        }
+        
+        if cases.allFirstCharactor || cases.stripWhitespace {
+            result = result.split(separator: " ").map{
+                return cases.allFirstCharactor ? getFirstCharactor(String($0)) : String($0)
+                }
+                .joined(separator: cases.stripWhitespace ? "" : " ")
+        }
+        
+        return result
     }
 }
 
