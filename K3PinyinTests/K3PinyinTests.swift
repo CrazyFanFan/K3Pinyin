@@ -47,97 +47,291 @@ class K3PinyinTests: XCTestCase {
         }
     }
     
-    // MARK: single option test
-    func testToPinyin() {
-        XCTAssertEqual(string.k3.pinyin, "zhōng guó")
+    func testNilOption() {
+        XCTAssertEqual(string.k3.pinyin(nil), "zhōng guó")
     }
     
-    func testStripCombiningMarks() {
+    func testEmptyOption() {
+        XCTAssertEqual(string.k3.pinyin([]), "zhōng guó")
+    }
+    
+    func testStripcombiningmarks() {
         XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks]), "zhong guo")
     }
     
+    func testStripcombiningmarksStripwhitespace() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace]), "zhongguo")
+    }
     
-    func testStripWhitespace() {
+    func testStripcombiningmarksStripwhitespaceOnlyfirstcharactor() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstCharactor]), "zhong")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstcharactorAllfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstCharactor, .allFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstcharactorAllfirstletterOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstCharactor, .allFirstLetter, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstcharactorAllfirstletterOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstCharactor, .allFirstLetter, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstcharactorAllfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstCharactor, .allFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstcharactorOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstCharactor, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstcharactorOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstCharactor, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstcharactorCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstCharactor, .capitalized]), "Zhong")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceAllfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .allFirstLetter]), "zg")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceAllfirstletterOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .allFirstLetter, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceAllfirstletterOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .allFirstLetter, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceAllfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .allFirstLetter, .capitalized]), "ZG")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksStripwhitespaceCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace, .capitalized]), "ZhongGuo")
+    }
+    
+    func testStripcombiningmarksOnlyfirstcharactor() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor]), "zhong")
+    }
+    
+    func testStripcombiningmarksOnlyfirstcharactorAllfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor, .allFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksOnlyfirstcharactorAllfirstletterOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor, .allFirstLetter, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksOnlyfirstcharactorAllfirstletterOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor, .allFirstLetter, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksOnlyfirstcharactorAllfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor, .allFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksOnlyfirstcharactorOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksOnlyfirstcharactorOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksOnlyfirstcharactorCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor, .capitalized]), "Zhong")
+    }
+    
+    func testStripcombiningmarksAllfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .allFirstLetter]), "z g")
+    }
+    
+    func testStripcombiningmarksAllfirstletterOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .allFirstLetter, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksAllfirstletterOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .allFirstLetter, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksAllfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .allFirstLetter, .capitalized]), "Z G")
+    }
+    
+    func testStripcombiningmarksOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripcombiningmarksOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripcombiningmarksCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .capitalized]), "Zhong Guo")
+    }
+    
+    func testStripwhitespace() {
         XCTAssertEqual(string.k3.pinyin([.stripWhitespace]), "zhōngguó")
     }
     
-    func testOnlyFirstCharactor() {
+    func testStripwhitespaceOnlyfirstcharactor() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor]), "zhōng")
+    }
+    
+    func testStripwhitespaceOnlyfirstcharactorAllfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor, .allFirstLetter]), "z")
+    }
+    
+    func testStripwhitespaceOnlyfirstcharactorAllfirstletterOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor, .allFirstLetter, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripwhitespaceOnlyfirstcharactorAllfirstletterOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor, .allFirstLetter, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripwhitespaceOnlyfirstcharactorAllfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor, .allFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripwhitespaceOnlyfirstcharactorOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripwhitespaceOnlyfirstcharactorOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripwhitespaceOnlyfirstcharactorCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor, .capitalized]), "Zhōng")
+    }
+    
+    func testStripwhitespaceAllfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .allFirstLetter]), "zg")
+    }
+    
+    func testStripwhitespaceAllfirstletterOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .allFirstLetter, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripwhitespaceAllfirstletterOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .allFirstLetter, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripwhitespaceAllfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .allFirstLetter, .capitalized]), "ZG")
+    }
+    
+    func testStripwhitespaceOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstLetter]), "z")
+    }
+    
+    func testStripwhitespaceOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testStripwhitespaceCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .capitalized]), "ZhōngGuó")
+    }
+    
+    func testOnlyfirstcharactor() {
         XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor]), "zhōng")
     }
     
-    func testOnlyFirstLetter() {
+    func testOnlyfirstcharactorAllfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .allFirstLetter]), "z")
+    }
+    
+    func testOnlyfirstcharactorAllfirstletterOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .allFirstLetter, .onlyFirstLetter]), "z")
+    }
+    
+    func testOnlyfirstcharactorAllfirstletterOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .allFirstLetter, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testOnlyfirstcharactorAllfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .allFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testOnlyfirstcharactorOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .onlyFirstLetter]), "z")
+    }
+    
+    func testOnlyfirstcharactorOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testOnlyfirstcharactorCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .capitalized]), "Zhōng")
+    }
+    
+    func testAllfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.allFirstLetter]), "z g")
+    }
+    
+    func testAllfirstletterOnlyfirstletter() {
+        XCTAssertEqual(string.k3.pinyin([.allFirstLetter, .onlyFirstLetter]), "z")
+    }
+    
+    func testAllfirstletterOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.allFirstLetter, .onlyFirstLetter, .capitalized]), "Z")
+    }
+    
+    func testAllfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.allFirstLetter, .capitalized]), "Z G")
+    }
+    
+    func testOnlyfirstletter() {
         XCTAssertEqual(string.k3.pinyin([.onlyFirstLetter]), "z")
     }
     
-    func testAllFirstCharactor() {
-        XCTAssertEqual(string.k3.pinyin([.allFirstLetter]), "z g")
+    func testOnlyfirstletterCapitalized() {
+        XCTAssertEqual(string.k3.pinyin([.onlyFirstLetter, .capitalized]), "Z")
     }
     
     func testCapitalized() {
         XCTAssertEqual(string.k3.pinyin([.capitalized]), "Zhōng Guó")
     }
     
-    // MARK: Combination two options test
-    func testStripCombiningMarksAndStripWhitespace() {
-        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .stripWhitespace]), "zhongguo")
+    func testMakeTestCase() {
+        makeTestCase()
     }
     
-    func testStripCombiningMarksAndOnlyFirstCharactor() {
-        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstCharactor]), "zhong")
+    private func makeTestCase() {
+        let options = [
+        "stripCombiningMarks",
+        "stripWhitespace",
+        "onlyFirstCharactor",
+        "allFirstLetter",
+        "onlyFirstLetter",
+        "capitalized"]
+        
+        let combs = combination(options)
+        for comb in combs {
+            print(
+                """
+                func test\(comb.map{$0.capitalized}.joined())() {
+                    XCTAssertEqual(string.k3.pinyin([.\(comb.joined(separator: ", ."))]), "")
+                }
+                
+                """
+            )
+        }
     }
-    
-    func testStripCombiningMarksAndOnlyFirstLetter() {
-        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .onlyFirstLetter]), "z")
-    }
-    
-    func testStripCombiningMarksAndAllFirstLetter() {
-        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .allFirstLetter]), "z g")
-    }
-    
-    func testStripCombiningMarksAndCapitalized() {
-        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .capitalized]), "Zhong Guo")
-    }
-    
-    func testStripWhitespaceAndOnlyFirstCharactor() {
-        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstCharactor]), "zhōng")
-    }
-    
-    func testStripWhitespaceAndOnlyFirstLetter() {
-        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .onlyFirstLetter]), "z")
-    }
-    
-    func testStripWhitespaceAndAllFirstLetter() {
-        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .allFirstLetter]), "zg")
-    }
-    
-    func testStripWhitespaceAndCapitalized() {
-        XCTAssertEqual(string.k3.pinyin([.stripWhitespace, .capitalized]), "ZhōngGuó")
-    }
-    
-    func testOnlyFirstCharactorAndOnlyFirstLetter() {
-        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .onlyFirstLetter]), "z")
-    }
-    
-    func testOnlyFirstCharactorAndAllFirstLetter() {
-        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .allFirstLetter]), "z")
-    }
-    
-    func testOnlyFirstCharactorAndCapitalized() {
-        XCTAssertEqual(string.k3.pinyin([.onlyFirstCharactor, .capitalized]), "Zhōng")
-    }
-    
-    func testOnlyFirstLetterAndAllFirstLetter() {
-        XCTAssertEqual(string.k3.pinyin([.onlyFirstLetter, .allFirstLetter]), "z")
-    }
-    
-    func testOnlyFirstLetterAndCapitalized() {
-        XCTAssertEqual(string.k3.pinyin([.onlyFirstLetter, .capitalized]), "Z")
-    }
-    
-    func testAllFirstLetterAndCapitalized() {
-        XCTAssertEqual(string.k3.pinyin([.allFirstLetter, .capitalized]), "Z G")
-    }
-    
     
     func testCombination() {
         let t = combination([1, 2, 3, 4, 5])
