@@ -88,8 +88,9 @@ public extension K3PinyinCompatible {
     }
 }
 
-extension String : K3PinyinCompatible {
-}
+extension String : K3PinyinCompatible {}
+
+extension NSString : K3PinyinCompatible {}
 
 // MARK: K3PinyinOptions
 

@@ -11,7 +11,7 @@ import XCTest
 
 class K3PinyinTests: XCTestCase {
     
-    let string = "中国"
+    let string:NSString = "中国"  
     
     override func setUp() {
         super.setUp()
