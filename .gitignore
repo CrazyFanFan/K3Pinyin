@@ -208,53 +208,5 @@ fastlane/test_output
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
-iOSInjectionProject/
-Common/FSComPlatform/FSComCore/lib/*
-Common/FSSocketEngine/baseframe/lib/*
-Common/Monitor/FSSpeedTrack/lib/*
-Common/FSComPlatform/FSComCore/lib/*
-Common/FSSocketEngine/baseframe/lib/*
-Common/FSSocketEngine/engine/lib/*
-Common/FSFoundationLib/sqlcipher/config.log
-Common/FSFoundationLib/sqlcipher/config.status
-Common/FSFoundationLib/sqlcipher/libtool
-Common/FSFoundationLib/sqlcipher/Makefile
-Common/Service/FSSchemes/FSSchemes/FSNativeSchemes/FSChatCRMHighSeaListScheme.h
-Common/Service/FSSchemes/FSSchemes/FSNativeSchemes/FSChatCRMHighSeaListScheme.m
-Common/Service/FSSchemes/FSSchemes/FSNativeSchemes/FSChatCRMHighSeaRuleScheme.h
-Common/Service/FSSchemes/FSSchemes/FSNativeSchemes/FSChatCRMHighSeaRuleScheme.m
-Common/Weex/package-lock.json
-Crm/FCrm/FCrm/FCrmNewPayment/FCrmCreatePaymentHandler+FormComponentDelegate.h
-Crm/FCrm/FCrm/FCrmNewPayment/FCrmCreatePaymentHandler+FormComponentDelegate.m
-Crm/FCrm/FCrm/FCrmNewPayment/FCrmCreatePaymentHandler.h
-Crm/FCrm/FCrm/FCrmNewPayment/FCrmCreatePaymentHandler.m
-Crm/FCrm/FCrm/FCrmNewPayment/FCrmPaymentListConfig.h
-Crm/FCrm/FCrm/FCrmNewPayment/FCrmPaymentListConfig.m
-Crm/Paas/FSUnicorn/FSUnicorn/FSList/FSObjectListConfiguration.h
-Library/FSComCore/inc/FSRouterPageItem.h
-Library/FSJSAPI/dependencies.json
-Library/FSUnicorn/inc/FSObjectDetailDataPresenter.h
-Library/FSUnicorn/inc/FSObjectListConfiguration.h
-Message/FSChat/FSChat/FSChatEntity/FSChatEntity+FSExpert.h
-Message/FSChat/FSChat/FSChatEntity/FSChatEntity+FSExpert.m
-Resource/Image/Contact/Contact.xcassets/Contents.json
-Resource/Image/Contact/Contact.xcassets/profile_call_cell.imageset/profile_call_cell@3x.png
-Resource/Image/Contact/Contact.xcassets/profile_call_telephone.imageset/Contents.json
-Resource/Image/Contact/Contact.xcassets/profile_call_telephone.imageset/profile_call_telephone@2x.png
-Resource/Image/Contact/Contact.xcassets/profile_call_telephone.imageset/profile_call_telephone@3x.png
-Resource/Image/Contact/Contact.xcassets/profile_female_icon.imageset/profile_female_icon@3x.png
-Resource/Image/Contact/Contact.xcassets/profile_mail_cell.imageset/profile_mail_cell@3x.png
-Resource/Image/Contact/Contact.xcassets/profile_male_icon.imageset/profile_maie_icon@2x.png
-Resource/Image/Contact/Contact.xcassets/profile_male_icon.imageset/profile_maie_icon@3x.png
-Resource/images/ReplaceIcon/logo_jinmailang@2x.png
-Resource/images/ReplaceIcon/logo_jinmailang@3x.png
-Shenzhen/FSAppCenter/FSAppCenter/Model/UpdateCustomerExpertsResult.h
-Shenzhen/FSAppCenter/FSAppCenter/Model/UpdateCustomerExpertsResult.m
-Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSAppCenterEntity+ChatModel.h
-Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSAppCenterEntity+ChatModel.m
-Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSAppCenterEntity+Expert.h
-Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSAppCenterEntity+Expert.m
-Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSChatModelManager.h
-Shenzhen/FSAppCenter/FSAppCenter/Model/pluginEntity/FSChatModelManager.m
-Shenzhen/FSJSAPI/FSJSAPI/Processor/CRM/FSJSSelectContactProcessor.h
-Shenzhen/FSJSAPI/FSJSAPI/Processor/CRM/FSJSSelectContactProcessor.m
+# pod 
+**/Pods/*

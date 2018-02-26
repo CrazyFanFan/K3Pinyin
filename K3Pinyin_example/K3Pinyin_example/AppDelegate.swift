@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  K3Pinyin_Demo
+//  K3Pinyin_example
 //
-//  Created by Crazy凡 on 2018/2/25.
+//  Created by Crazy凡 on 2018/2/26.
 //  Copyright © 2018年 Crazy凡. All rights reserved.
 //
 
@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        window = UIWindow.init()
-        window?.rootViewController = ExampleViewController.init()
+        window = UIWindow()
+        window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
         
         return true
