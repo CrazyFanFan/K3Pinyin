@@ -74,21 +74,21 @@ public extension K3Pinyin {
 }
 
 
-// MARK: k3PinyinCompatible
+// MARK: K3PinyinCompatible
 
-public protocol k3PinyinCompatible {
+public protocol K3PinyinCompatible {
     associatedtype CompatibleType
     var k3: CompatibleType { get }
 }
 
 
-public extension k3PinyinCompatible {
+public extension K3PinyinCompatible {
     public var k3: K3Pinyin {
         get { return K3Pinyin(self as! String) }
     }
 }
 
-extension String : k3PinyinCompatible {
+extension String : K3PinyinCompatible {
 }
 
 // MARK: K3PinyinOptions
