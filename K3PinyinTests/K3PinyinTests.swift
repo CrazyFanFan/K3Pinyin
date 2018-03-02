@@ -48,18 +48,18 @@ class K3PinyinTests: XCTestCase {
     }
     
     func testNilOption() {
-        XCTAssertEqual(string.k3.pinyin(nil), "zhōng guó")
+        XCTAssertEqual(string.k3.pinyin(nil), "zhōngguó")
         string.k3.pinyin(nil) { (pinyin) in
-            XCTAssertEqual(pinyin, "zhōng guó")
+            XCTAssertEqual(pinyin, "zhōngguó")
         }
     }
     
     func testEmptyOption() {
-        XCTAssertEqual(string.k3.pinyin([]), "zhōng guó")
+        XCTAssertEqual(string.k3.pinyin([]), "zhōngguó")
     }
     
     func testStripcombiningmarks() {
-        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks]), "zhong guo")
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks]), "zhongguo")
     }
     
     func testStripcombiningmarksSeparator() {
@@ -183,13 +183,14 @@ class K3PinyinTests: XCTestCase {
     }
     
     func testStripcombiningmarksCapitalized() {
-        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .capitalized]), "Zhong Guo")
+        XCTAssertEqual(string.k3.pinyin([.stripCombiningMarks, .capitalized]), "ZhongGuo")
     }
     
     func testSeparator() {
         XCTAssertEqual(string.k3.pinyin([.separator("")]), "zhōngguó")
         XCTAssertEqual(string.k3.pinyin([.separator("A")]), "zhōngAguó")
         XCTAssertEqual(string.k3.pinyin([.separator(" ")]), "zhōng guó")
+        XCTAssertEqual(string.k3.pinyin([.separator("zhōng gu")]), "zhōngzhōng guguó")
     }
     
     func testSeparatorOnlyfirstcharactor() {
@@ -309,7 +310,7 @@ class K3PinyinTests: XCTestCase {
     }
     
     func testCapitalized() {
-        XCTAssertEqual(string.k3.pinyin([.capitalized]), "Zhōng Guó")
+        XCTAssertEqual(string.k3.pinyin([.capitalized]), "ZhōngGuó")
     }
     
     func testMakeTestCase() {

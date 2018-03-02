@@ -42,11 +42,7 @@ public extension K3Pinyin {
         let cfString = CFStringCreateMutableCopy(nil, 0, source as CFString)
         CFStringTransform(cfString, nil, kCFStringTransformToLatin, false) // 有音标
         
-        guard options != nil else {
-            return cfString! as String
-        }
-        
-        let cases = options!
+        let cases = options ?? []
         
         if cases.stripCombiningMarks {
             CFStringTransform(cfString, nil, kCFStringTransformStripCombiningMarks, false) //无音标
@@ -62,13 +58,10 @@ public extension K3Pinyin {
             result = result.capitalized
         }
         
-        let separator = cases.separator
-        if cases.allFirstLetter || separator != nil{
-            result = result.split(separator: " ").map{
-                return cases.allFirstLetter ? getFirstLetter(String($0)) : String($0)
-                }
-                .joined(separator: separator ?? "")
-        }
+        result = result.split(separator: " ").map {
+            return cases.allFirstLetter ? getFirstLetter(String($0)) : String($0)
+            }
+            .joined(separator: cases.separator ?? "")
         
         return result
     }
@@ -137,7 +130,7 @@ public extension Collection where Iterator.Element == K3PinyinOption {
     
     var separator: String? {
         if let item = reversed().first(where: { $0 <==> .separator("")}),
-                                       case .separator(let separator) = item
+            case .separator(let separator) = item
         {
             return separator
         }
