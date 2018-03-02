@@ -62,11 +62,12 @@ public extension K3Pinyin {
             result = result.capitalized
         }
         
-        if cases.allFirstLetter || cases.stripWhitespace {
+        let separator = cases.separator
+        if cases.allFirstLetter || separator != nil{
             result = result.split(separator: " ").map{
                 return cases.allFirstLetter ? getFirstLetter(String($0)) : String($0)
                 }
-                .joined(separator: cases.stripWhitespace ? "" : " ")
+                .joined(separator: separator ?? "")
         }
         
         return result
@@ -102,35 +103,60 @@ public typealias K3PinyinOptions = [K3PinyinOption]
 
 public enum K3PinyinOption {
     case stripCombiningMarks
-    case stripWhitespace
+    case separator(String)
     case onlyFirstCharactor
     case allFirstLetter
     case onlyFirstLetter
     case capitalized
 }
 
+precedencegroup OptionComparisonPrecedence {
+    associativity: none
+    higherThan: LogicalConjunctionPrecedence
+}
+
+infix operator <==> : OptionComparisonPrecedence
+
+// This operator returns true if two `K3PinyinOption` enum is the same, without considering the associated values.
+func <==> (lhs: K3PinyinOption, rhs: K3PinyinOption) -> Bool {
+    switch (lhs, rhs) {
+    case (.stripCombiningMarks, .stripCombiningMarks):  return true
+    case (.separator(_),        .separator(_)):         return true
+    case (.onlyFirstCharactor,  .onlyFirstCharactor):   return true
+    case (.allFirstLetter,      .allFirstLetter):       return true
+    case (.onlyFirstLetter,     .onlyFirstLetter):      return true
+    case (.capitalized,         .capitalized):          return true
+    default:return false
+    }
+}
+
 public extension Collection where Iterator.Element == K3PinyinOption {
     var stripCombiningMarks: Bool {
-        return contains{$0 == .stripCombiningMarks}
+        return contains{$0 <==> .stripCombiningMarks}
     }
     
-    var stripWhitespace: Bool {
-        return contains{$0 == .stripWhitespace}
+    var separator: String? {
+        if let item = reversed().first(where: { $0 <==> .separator("")}),
+                                       case .separator(let separator) = item
+        {
+            return separator
+        }
+        return nil
     }
     
     var onlyFirstCharactor: Bool {
-        return contains{$0 == .onlyFirstCharactor}
+        return contains{$0 <==> .onlyFirstCharactor}
     }
     
     var allFirstLetter: Bool {
-        return contains{$0 == .allFirstLetter}
+        return contains{$0 <==> .allFirstLetter}
     }
     
     var onlyFirstLetter: Bool {
-        return contains{$0 == .onlyFirstLetter}
+        return contains{$0 <==> .onlyFirstLetter}
     }
     
     var capitalized : Bool {
-        return contains{$0 == .capitalized}
+        return contains{$0 <==> .capitalized}
     }
 }
