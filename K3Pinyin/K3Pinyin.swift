@@ -71,6 +71,10 @@ public extension K3Pinyin {
         
         return result
     }
+    
+    func pinyin(_ options: K3PinyinOptions?, completion: @escaping (_ pinyin: String) -> ()) {
+        completion(pinyin(options))
+    }
 }
 
 

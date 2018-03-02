@@ -49,6 +49,9 @@ class K3PinyinTests: XCTestCase {
     
     func testNilOption() {
         XCTAssertEqual(string.k3.pinyin(nil), "zhōng guó")
+        string.k3.pinyin(nil) { (pinyin) in
+            XCTAssertEqual(pinyin, "zhōng guó")
+        }
     }
     
     func testEmptyOption() {
