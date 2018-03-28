@@ -21,47 +21,46 @@ public extension K3Pinyin {
     }
     
     func pinyin(_ options: K3PinyinOptions?) -> String {
-        func getFirstLetter(_ source: String) -> String {
-            guard base.count > 0 else {
-                return ""
-            }
-            let start = source.startIndex
-            let end = source.index(start, offsetBy: 1)
-            return String(source[start..<end])
-        }
         
         guard base.count > 0 else {
             return ""
         }
         
-        var source = base
-        if options != nil && (options!.onlyFirstCharactor || options!.onlyFirstLetter) {
-            source = getFirstLetter(source)
-        }
-        
-        let cfString = CFStringCreateMutableCopy(nil, 0, source as CFString)
-        CFStringTransform(cfString, nil, kCFStringTransformToLatin, false) // 有音标
+        let DEFAULT_SEPARATOR = ""
         
         let cases = options ?? []
+        let source = (cases.onlyFirstCharacter || cases.onlyFirstLetter ? "\(base.first!)" : base)
+        
+        let cfString = CFStringCreateMutableCopy(nil, 0, source as CFString)
+        CFStringTransform(cfString, nil, kCFStringTransformToLatin, false)
         
         if cases.stripCombiningMarks {
-            CFStringTransform(cfString, nil, kCFStringTransformStripCombiningMarks, false) //无音标
+            CFStringTransform(cfString, nil, kCFStringTransformStripCombiningMarks, false)
         }
         
         var result: String = cfString! as String
         
+        guard options != nil else {
+            return result.replacingOccurrences(of: " ", with: DEFAULT_SEPARATOR)
+        }
+        
         if cases.onlyFirstLetter {
-            result = getFirstLetter(result)
+            result = "\(result.first!)"
         }
         
         if cases.capitalized {
             result = result.capitalized
         }
         
-        result = result.split(separator: " ").map {
-            return cases.allFirstLetter ? getFirstLetter(String($0)) : String($0)
-            }
-            .joined(separator: cases.separator ?? "")
+        let separator = cases.separator ?? DEFAULT_SEPARATOR
+        
+        if cases.allFirstLetter {
+            result = result.split(separator: " ")
+                .map { "\($0.first!)" }
+                .joined(separator: separator)
+        } else {
+            result = result.replacingOccurrences(of: " ", with:separator)
+        }
         
         return result
     }
@@ -97,7 +96,7 @@ public typealias K3PinyinOptions = [K3PinyinOption]
 public enum K3PinyinOption {
     case stripCombiningMarks
     case separator(String)
-    case onlyFirstCharactor
+    case onlyFirstCharacter
     case allFirstLetter
     case onlyFirstLetter
     case capitalized
@@ -115,7 +114,7 @@ func <==> (lhs: K3PinyinOption, rhs: K3PinyinOption) -> Bool {
     switch (lhs, rhs) {
     case (.stripCombiningMarks, .stripCombiningMarks):  return true
     case (.separator(_),        .separator(_)):         return true
-    case (.onlyFirstCharactor,  .onlyFirstCharactor):   return true
+    case (.onlyFirstCharacter,  .onlyFirstCharacter):   return true
     case (.allFirstLetter,      .allFirstLetter):       return true
     case (.onlyFirstLetter,     .onlyFirstLetter):      return true
     case (.capitalized,         .capitalized):          return true
@@ -137,8 +136,8 @@ public extension Collection where Iterator.Element == K3PinyinOption {
         return nil
     }
     
-    var onlyFirstCharactor: Bool {
-        return contains{$0 <==> .onlyFirstCharactor}
+    var onlyFirstCharacter: Bool {
+        return contains{$0 <==> .onlyFirstCharacter}
     }
     
     var allFirstLetter: Bool {
