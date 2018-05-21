@@ -8,14 +8,7 @@
 
 import Foundation
 
-public struct K3Pinyin {
-    fileprivate let base: String
-    init(_ base: String) {
-        self.base = base
-    }
-}
-
-public extension K3Pinyin {
+public extension K3Base where BaseType == String {
     var pinyin: String {
         return pinyin(nil)
     }
@@ -70,25 +63,22 @@ public extension K3Pinyin {
     }
 }
 
+public extension K3Base where BaseType == NSString {
+    var pinyin: String {
+        return pinyin(nil)
+    }
 
-// MARK: K3PinyinCompatible
+    func pinyin(_ options: K3PinyinOptions?) -> String {
+        return (base as String).k3.pinyin(options)
+    }
 
-public protocol K3PinyinCompatible {
-    associatedtype CompatibleType
-    var k3: CompatibleType { get }
-}
-
-
-public extension K3PinyinCompatible {
-    public var k3: K3Pinyin {
-        get { return K3Pinyin(self as! String) }
+    func pinyin(_ options: K3PinyinOptions?, completion: @escaping (_ pinyin: String) -> ()) {
+        completion(pinyin(options))
     }
 }
 
-extension String : K3PinyinCompatible {}
-
-extension NSString : K3PinyinCompatible {}
-
+extension String :K3BaseCompatible {}
+extension NSString :K3BaseCompatible {}
 // MARK: K3PinyinOptions
 
 public typealias K3PinyinOptions = [K3PinyinOption]
