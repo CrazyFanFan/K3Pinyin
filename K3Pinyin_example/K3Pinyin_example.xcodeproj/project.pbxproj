@@ -7,80 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F86B6512043EAD10064BDAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6502043EAD10064BDAE /* AppDelegate.swift */; };
-		4F86B6532043EAD10064BDAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6522043EAD10064BDAE /* ViewController.swift */; };
-		4F86B6582043EAD10064BDAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F86B6572043EAD10064BDAE /* Assets.xcassets */; };
-		4F86B65B2043EAD10064BDAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F86B6592043EAD10064BDAE /* LaunchScreen.storyboard */; };
-		9EC0D3454F274B175A26873F /* Pods_K3Pinyin_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBEA6B165EC7B0343AED95 /* Pods_K3Pinyin_example.framework */; };
+		18B23DC1FCF74ABB5CED14EA28AE0C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0E9DB9215BBBEC6D77BBA200E9B9DD /* Assets.xcassets */; };
+		76B45E87453437A2B71AC79C34BED3C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A2D5AACB50198278CEDDE65183F8C1 /* LaunchScreen.storyboard */; };
+		A377951CB6BC1453105292EF9CD440A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170097A2E8400322BCE35CD8DE9049DB /* AppDelegate.swift */; };
+		AB93A7CA1AB72314A6AFF6386D0F3A9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1EEF1AF24DE125FEE07B9430ABC888 /* ViewController.swift */; };
+		BF058EDDF5BA85F274A63E6AD724080D /* Pods_K3Pinyin_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714DA54D4B1E60A68D29D8A734156294 /* Pods_K3Pinyin_example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3392F8B31D34DF23E57461DC /* Pods-K3Pinyin_example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3Pinyin_example.release.xcconfig"; path = "Pods/Target Support Files/Pods-K3Pinyin_example/Pods-K3Pinyin_example.release.xcconfig"; sourceTree = "<group>"; };
-		4F86B64D2043EAD10064BDAE /* K3Pinyin_example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = K3Pinyin_example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F86B6502043EAD10064BDAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F86B6522043EAD10064BDAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4F86B6572043EAD10064BDAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F86B65A2043EAD10064BDAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4F86B65C2043EAD10064BDAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3EBEA6B165EC7B0343AED95 /* Pods_K3Pinyin_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K3Pinyin_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD5477AC3A690A7397DED0B5 /* Pods-K3Pinyin_example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3Pinyin_example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K3Pinyin_example/Pods-K3Pinyin_example.debug.xcconfig"; sourceTree = "<group>"; };
+		170097A2E8400322BCE35CD8DE9049DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52486643FCEA5F1438FE4143436C120F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		714DA54D4B1E60A68D29D8A734156294 /* Pods_K3Pinyin_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K3Pinyin_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E1EEF1AF24DE125FEE07B9430ABC888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8586DA83C899AD39438C7D36992FF674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE7189467E95D6E601F27C5ED404C828 /* Pods-K3Pinyin_example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3Pinyin_example.release.xcconfig"; path = "Pods/Target Support Files/Pods-K3Pinyin_example/Pods-K3Pinyin_example.release.xcconfig"; sourceTree = "<group>"; };
+		C2C343F7A2E709400D57603B85F02886 /* Pods-K3Pinyin_example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3Pinyin_example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K3Pinyin_example/Pods-K3Pinyin_example.debug.xcconfig"; sourceTree = "<group>"; };
+		C5E1AA8F88CEFD798EEBFA5920FD7D47 /* K3Pinyin_example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = K3Pinyin_example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC0E9DB9215BBBEC6D77BBA200E9B9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F86B64A2043EAD10064BDAE /* Frameworks */ = {
+		52481CF4FA4713005890425F53BF8350 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EC0D3454F274B175A26873F /* Pods_K3Pinyin_example.framework in Frameworks */,
+				BF058EDDF5BA85F274A63E6AD724080D /* Pods_K3Pinyin_example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F86B6442043EAD10064BDAE = {
+		327C1F13ADE4E98DDD708DED4A8872AF = {
 			isa = PBXGroup;
 			children = (
-				4F86B64F2043EAD10064BDAE /* K3Pinyin_example */,
-				4F86B64E2043EAD10064BDAE /* Products */,
-				D869B6BA3D0082BE0F7DA7B3 /* Pods */,
-				4FC16BC304A38E9D052C7FFE /* Frameworks */,
+				E5035CC5ACFECC49B67BB3FFA2B6BD61 /* Frameworks */,
+				BDF9F68F18B942770A7EC12E0420B876 /* K3Pinyin_example */,
+				A20F85A724BC706DB44D6DA82FD9B063 /* Pods */,
+				B6C5CA275AD809EE4B93B62CD4C3A40A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F86B64E2043EAD10064BDAE /* Products */ = {
+		B6C5CA275AD809EE4B93B62CD4C3A40A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F86B64D2043EAD10064BDAE /* K3Pinyin_example.app */,
+				C5E1AA8F88CEFD798EEBFA5920FD7D47 /* K3Pinyin_example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F86B64F2043EAD10064BDAE /* K3Pinyin_example */ = {
+		BDF9F68F18B942770A7EC12E0420B876 /* K3Pinyin_example */ = {
 			isa = PBXGroup;
 			children = (
-				4F86B6502043EAD10064BDAE /* AppDelegate.swift */,
-				4F86B6522043EAD10064BDAE /* ViewController.swift */,
-				4F86B6572043EAD10064BDAE /* Assets.xcassets */,
-				4F86B6592043EAD10064BDAE /* LaunchScreen.storyboard */,
-				4F86B65C2043EAD10064BDAE /* Info.plist */,
+				170097A2E8400322BCE35CD8DE9049DB /* AppDelegate.swift */,
+				DC0E9DB9215BBBEC6D77BBA200E9B9DD /* Assets.xcassets */,
+				8586DA83C899AD39438C7D36992FF674 /* Info.plist */,
+				25A2D5AACB50198278CEDDE65183F8C1 /* LaunchScreen.storyboard */,
+				7E1EEF1AF24DE125FEE07B9430ABC888 /* ViewController.swift */,
 			);
 			path = K3Pinyin_example;
 			sourceTree = "<group>";
 		};
-		4FC16BC304A38E9D052C7FFE /* Frameworks */ = {
+		E5035CC5ACFECC49B67BB3FFA2B6BD61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3EBEA6B165EC7B0343AED95 /* Pods_K3Pinyin_example.framework */,
+				714DA54D4B1E60A68D29D8A734156294 /* Pods_K3Pinyin_example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D869B6BA3D0082BE0F7DA7B3 /* Pods */ = {
+		A20F85A724BC706DB44D6DA82FD9B063 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DD5477AC3A690A7397DED0B5 /* Pods-K3Pinyin_example.debug.xcconfig */,
-				3392F8B31D34DF23E57461DC /* Pods-K3Pinyin_example.release.xcconfig */,
+				C2C343F7A2E709400D57603B85F02886 /* Pods-K3Pinyin_example.debug.xcconfig */,
+				BE7189467E95D6E601F27C5ED404C828 /* Pods-K3Pinyin_example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -88,16 +88,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F86B64C2043EAD10064BDAE /* K3Pinyin_example */ = {
+		BF93EF2AE840C6D07B8E28F2649B2EEF /* K3Pinyin_example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F86B6752043EAD10064BDAE /* Build configuration list for PBXNativeTarget "K3Pinyin_example" */;
+			buildConfigurationList = 7F3CAC3A8464C8AF4854951F436F6E63 /* Build configuration list for PBXNativeTarget "K3Pinyin_example" */;
 			buildPhases = (
-				481709D346360BEB90EDABA0 /* [CP] Check Pods Manifest.lock */,
-				4F86B6492043EAD10064BDAE /* Sources */,
-				4F86B64A2043EAD10064BDAE /* Frameworks */,
-				4F86B64B2043EAD10064BDAE /* Resources */,
-				5A3A044825B606E2B5FEDB26 /* [CP] Embed Pods Frameworks */,
-				601E97AD97623171531F7E75 /* [CP] Copy Pods Resources */,
+				7E21E2E3F9E3AA8E208A04C22E11059E /* [CP] Check Pods Manifest.lock */,
+				7BD528AD4AEDAA0AFBE55622CFE13F0F /* Sources */,
+				52481CF4FA4713005890425F53BF8350 /* Frameworks */,
+				F3E0ABCF0362EB9C638A675A14FF1ABB /* Resources */,
+				4C56B3AABEA36F99D804EA67AFB639FB /* [CP] Embed Pods Frameworks */,
+				F70CC205FE138266E350214D6337F604 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -105,26 +105,26 @@
 			);
 			name = K3Pinyin_example;
 			productName = K3Pinyin_example;
-			productReference = 4F86B64D2043EAD10064BDAE /* K3Pinyin_example.app */;
+			productReference = C5E1AA8F88CEFD798EEBFA5920FD7D47 /* K3Pinyin_example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F86B6452043EAD10064BDAE /* Project object */ = {
+		0AD4DA20DA763D7BC4704ED899AF9511 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Crazy凡";
 				TargetAttributes = {
-					4F86B64C2043EAD10064BDAE = {
+					BF93EF2AE840C6D07B8E28F2649B2EEF = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 4F86B6482043EAD10064BDAE /* Build configuration list for PBXProject "K3Pinyin_example" */;
+			buildConfigurationList = 86D92DF9915C3E89D79428EE8C578DE9 /* Build configuration list for PBXProject "K3Pinyin_example" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -132,30 +132,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 4F86B6442043EAD10064BDAE;
-			productRefGroup = 4F86B64E2043EAD10064BDAE /* Products */;
+			mainGroup = 327C1F13ADE4E98DDD708DED4A8872AF;
+			productRefGroup = B6C5CA275AD809EE4B93B62CD4C3A40A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F86B64C2043EAD10064BDAE /* K3Pinyin_example */,
+				BF93EF2AE840C6D07B8E28F2649B2EEF /* K3Pinyin_example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F86B64B2043EAD10064BDAE /* Resources */ = {
+		F3E0ABCF0362EB9C638A675A14FF1ABB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F86B65B2043EAD10064BDAE /* LaunchScreen.storyboard in Resources */,
-				4F86B6582043EAD10064BDAE /* Assets.xcassets in Resources */,
+				18B23DC1FCF74ABB5CED14EA28AE0C61 /* Assets.xcassets in Resources */,
+				76B45E87453437A2B71AC79C34BED3C1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		481709D346360BEB90EDABA0 /* [CP] Check Pods Manifest.lock */ = {
+		7E21E2E3F9E3AA8E208A04C22E11059E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -173,7 +173,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A3A044825B606E2B5FEDB26 /* [CP] Embed Pods Frameworks */ = {
+		4C56B3AABEA36F99D804EA67AFB639FB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -191,7 +191,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-K3Pinyin_example/Pods-K3Pinyin_example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		601E97AD97623171531F7E75 /* [CP] Copy Pods Resources */ = {
+		F70CC205FE138266E350214D6337F604 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -209,22 +209,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F86B6492043EAD10064BDAE /* Sources */ = {
+		7BD528AD4AEDAA0AFBE55622CFE13F0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F86B6532043EAD10064BDAE /* ViewController.swift in Sources */,
-				4F86B6512043EAD10064BDAE /* AppDelegate.swift in Sources */,
+				A377951CB6BC1453105292EF9CD440A9 /* AppDelegate.swift in Sources */,
+				AB93A7CA1AB72314A6AFF6386D0F3A9B /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F86B6592043EAD10064BDAE /* LaunchScreen.storyboard */ = {
+		25A2D5AACB50198278CEDDE65183F8C1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4F86B65A2043EAD10064BDAE /* Base */,
+				52486643FCEA5F1438FE4143436C120F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4F86B6732043EAD10064BDAE /* Debug */ = {
+		B506B32A77AC63A457C8D0C42D104BD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -289,7 +289,7 @@
 			};
 			name = Debug;
 		};
-		4F86B6742043EAD10064BDAE /* Release */ = {
+		398943266A4CFF707F0C8D88821B5294 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -339,9 +339,9 @@
 			};
 			name = Release;
 		};
-		4F86B6762043EAD10064BDAE /* Debug */ = {
+		99E3513149D444311B7EEA4A82FA067B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD5477AC3A690A7397DED0B5 /* Pods-K3Pinyin_example.debug.xcconfig */;
+			baseConfigurationReference = C2C343F7A2E709400D57603B85F02886 /* Pods-K3Pinyin_example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -356,9 +356,9 @@
 			};
 			name = Debug;
 		};
-		4F86B6772043EAD10064BDAE /* Release */ = {
+		0E994616499F515A933D48057CEA932F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3392F8B31D34DF23E57461DC /* Pods-K3Pinyin_example.release.xcconfig */;
+			baseConfigurationReference = BE7189467E95D6E601F27C5ED404C828 /* Pods-K3Pinyin_example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,25 +376,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F86B6482043EAD10064BDAE /* Build configuration list for PBXProject "K3Pinyin_example" */ = {
+		86D92DF9915C3E89D79428EE8C578DE9 /* Build configuration list for PBXProject "K3Pinyin_example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F86B6732043EAD10064BDAE /* Debug */,
-				4F86B6742043EAD10064BDAE /* Release */,
+				B506B32A77AC63A457C8D0C42D104BD9 /* Debug */,
+				398943266A4CFF707F0C8D88821B5294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F86B6752043EAD10064BDAE /* Build configuration list for PBXNativeTarget "K3Pinyin_example" */ = {
+		7F3CAC3A8464C8AF4854951F436F6E63 /* Build configuration list for PBXNativeTarget "K3Pinyin_example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F86B6762043EAD10064BDAE /* Debug */,
-				4F86B6772043EAD10064BDAE /* Release */,
+				99E3513149D444311B7EEA4A82FA067B /* Debug */,
+				0E994616499F515A933D48057CEA932F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4F86B6452043EAD10064BDAE /* Project object */;
+	rootObject = 0AD4DA20DA763D7BC4704ED899AF9511 /* Project object */;
 }

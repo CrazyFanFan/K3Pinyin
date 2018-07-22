@@ -7,96 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F52085F20416845003C7F95 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F52085D20416844003C7F95 /* README.md */; };
-		4F52086020416845003C7F95 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4F52085E20416844003C7F95 /* LICENSE */; };
-		4F98214D2041391600CDAB85 /* K3Pinyin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9821432041391600CDAB85 /* K3Pinyin.framework */; };
-		4F9821522041391600CDAB85 /* K3PinyinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9821512041391600CDAB85 /* K3PinyinTests.swift */; };
-		4F9821542041391600CDAB85 /* K3Pinyin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9821462041391600CDAB85 /* K3Pinyin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F98215E2041392300CDAB85 /* K3Pinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F98215D2041392300CDAB85 /* K3Pinyin.swift */; };
-		4F9821602041399400CDAB85 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F98215F2041399400CDAB85 /* TestCase.swift */; };
-		A989174720B2CA1700A20772 /* K3Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989174620B2CA1700A20772 /* K3Compatible.swift */; };
+		469B158BB8A913845DE4431A35436598 /* K3Pinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927922B2F4076CCE9B28908A16F658EB /* K3Pinyin.swift */; };
+		5B094CAA4846820BA64415CDAB148B6A /* K3PinyinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C7217CC3A90ADB7003F9E583781C3 /* K3PinyinTests.swift */; };
+		5EE3B1573F9ED159DFBEDFFE97B7F008 /* K3Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B073D6F4D631586B67DE777361379 /* K3Compatible.swift */; };
+		5F3138003DEA6B11842CC407E7E9DD6B /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C5CE5F514DDBDF7890D05E541CA45 /* TestCase.swift */; };
+		93D9D208190A83DC40DDFD1DE3F863F1 /* K3Pinyin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBBDD12540F91D55D83F991E7723D66 /* K3Pinyin.framework */; };
+		A3B61A7BA00A14119BCD7D50A21D62E3 /* K3Pinyin.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B34D5F66CF37A6E7B3039D79ECD22E6 /* K3Pinyin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA95D512B5BD2704F488B224F4D8C41D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 319FBF1A979F26C4365C7FDEC7384D47 /* README.md */; };
+		C8C65417587FB73CF93A0CB1BA072D69 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A205DB31509FC94E991ECFF014F3A2F2 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4F98214E2041391600CDAB85 /* PBXContainerItemProxy */ = {
+		C913CDA8B162625790FA54185D388A58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4F98213A2041391600CDAB85 /* Project object */;
+			containerPortal = 8EC45AB8EEB4A0550DED5014B87BC572 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4F9821422041391600CDAB85;
+			remoteGlobalIDString = 049E2D7F061A1FAC026D89D8C801A46A;
 			remoteInfo = K3Pinyin;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F52085D20416844003C7F95 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4F52085E20416844003C7F95 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		4F9821432041391600CDAB85 /* K3Pinyin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = K3Pinyin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F9821462041391600CDAB85 /* K3Pinyin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = K3Pinyin.h; sourceTree = "<group>"; };
-		4F9821472041391600CDAB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F98214C2041391600CDAB85 /* K3PinyinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = K3PinyinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F9821512041391600CDAB85 /* K3PinyinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K3PinyinTests.swift; sourceTree = "<group>"; };
-		4F9821532041391600CDAB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F98215D2041392300CDAB85 /* K3Pinyin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K3Pinyin.swift; sourceTree = "<group>"; };
-		4F98215F2041399400CDAB85 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
-		A989174620B2CA1700A20772 /* K3Compatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K3Compatible.swift; sourceTree = "<group>"; };
+		19070914A3090A52FDB95660B5F08399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B34D5F66CF37A6E7B3039D79ECD22E6 /* K3Pinyin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = K3Pinyin.h; sourceTree = "<group>"; };
+		319FBF1A979F26C4365C7FDEC7384D47 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		552B073D6F4D631586B67DE777361379 /* K3Compatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K3Compatible.swift; sourceTree = "<group>"; };
+		8FBBDD12540F91D55D83F991E7723D66 /* K3Pinyin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = K3Pinyin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		927922B2F4076CCE9B28908A16F658EB /* K3Pinyin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K3Pinyin.swift; sourceTree = "<group>"; };
+		9E6147BF13C474D35C12A003CD5F635A /* K3PinyinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = K3PinyinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A205DB31509FC94E991ECFF014F3A2F2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D67C7217CC3A90ADB7003F9E583781C3 /* K3PinyinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K3PinyinTests.swift; sourceTree = "<group>"; };
+		FE1C5CE5F514DDBDF7890D05E541CA45 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		FFA18F5A1191D858D94E7AF883AF3D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F98213F2041391600CDAB85 /* Frameworks */ = {
+		186571A1371AE466C2B5D6EE8960356C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F9821492041391600CDAB85 /* Frameworks */ = {
+		9BA11A871F60021361C5404BCB58BF43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F98214D2041391600CDAB85 /* K3Pinyin.framework in Frameworks */,
+				93D9D208190A83DC40DDFD1DE3F863F1 /* K3Pinyin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F9821392041391600CDAB85 = {
+		C80B4D2A982AE97B063F3B9B164C86BE = {
 			isa = PBXGroup;
 			children = (
-				4F52085E20416844003C7F95 /* LICENSE */,
-				4F52085D20416844003C7F95 /* README.md */,
-				4F9821452041391600CDAB85 /* K3Pinyin */,
-				4F9821502041391600CDAB85 /* K3PinyinTests */,
-				4F9821442041391600CDAB85 /* Products */,
+				D1C0BEC6BBC23D215184B68C81CF5EEF /* K3Pinyin */,
+				4811CDB7709E1E2ADD432743BDD033A7 /* K3PinyinTests */,
+				A205DB31509FC94E991ECFF014F3A2F2 /* LICENSE */,
+				9025CBF996ACA2F574BDF0A57578C787 /* Products */,
+				319FBF1A979F26C4365C7FDEC7384D47 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
-		4F9821442041391600CDAB85 /* Products */ = {
+		9025CBF996ACA2F574BDF0A57578C787 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F9821432041391600CDAB85 /* K3Pinyin.framework */,
-				4F98214C2041391600CDAB85 /* K3PinyinTests.xctest */,
+				8FBBDD12540F91D55D83F991E7723D66 /* K3Pinyin.framework */,
+				9E6147BF13C474D35C12A003CD5F635A /* K3PinyinTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F9821452041391600CDAB85 /* K3Pinyin */ = {
+		D1C0BEC6BBC23D215184B68C81CF5EEF /* K3Pinyin */ = {
 			isa = PBXGroup;
 			children = (
-				A989174620B2CA1700A20772 /* K3Compatible.swift */,
-				4F98215D2041392300CDAB85 /* K3Pinyin.swift */,
-				4F9821462041391600CDAB85 /* K3Pinyin.h */,
-				4F9821472041391600CDAB85 /* Info.plist */,
+				19070914A3090A52FDB95660B5F08399 /* Info.plist */,
+				552B073D6F4D631586B67DE777361379 /* K3Compatible.swift */,
+				2B34D5F66CF37A6E7B3039D79ECD22E6 /* K3Pinyin.h */,
+				927922B2F4076CCE9B28908A16F658EB /* K3Pinyin.swift */,
 			);
 			path = K3Pinyin;
 			sourceTree = "<group>";
 		};
-		4F9821502041391600CDAB85 /* K3PinyinTests */ = {
+		4811CDB7709E1E2ADD432743BDD033A7 /* K3PinyinTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F9821512041391600CDAB85 /* K3PinyinTests.swift */,
-				4F9821532041391600CDAB85 /* Info.plist */,
-				4F98215F2041399400CDAB85 /* TestCase.swift */,
+				FFA18F5A1191D858D94E7AF883AF3D76 /* Info.plist */,
+				D67C7217CC3A90ADB7003F9E583781C3 /* K3PinyinTests.swift */,
+				FE1C5CE5F514DDBDF7890D05E541CA45 /* TestCase.swift */,
 			);
 			path = K3PinyinTests;
 			sourceTree = "<group>";
@@ -104,25 +104,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4F9821402041391600CDAB85 /* Headers */ = {
+		AD0E3AC3273DFD011FE96D3B5302C834 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F9821542041391600CDAB85 /* K3Pinyin.h in Headers */,
+				A3B61A7BA00A14119BCD7D50A21D62E3 /* K3Pinyin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4F9821422041391600CDAB85 /* K3Pinyin */ = {
+		049E2D7F061A1FAC026D89D8C801A46A /* K3Pinyin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F9821572041391600CDAB85 /* Build configuration list for PBXNativeTarget "K3Pinyin" */;
+			buildConfigurationList = EF55FDFF5F0A33E673882113EE016484 /* Build configuration list for PBXNativeTarget "K3Pinyin" */;
 			buildPhases = (
-				4F98213E2041391600CDAB85 /* Sources */,
-				4F98213F2041391600CDAB85 /* Frameworks */,
-				4F9821402041391600CDAB85 /* Headers */,
-				4F9821412041391600CDAB85 /* Resources */,
+				5CD5C825A74E900296B28D5BA06ABAFA /* Sources */,
+				186571A1371AE466C2B5D6EE8960356C /* Frameworks */,
+				AD0E3AC3273DFD011FE96D3B5302C834 /* Headers */,
+				72E917DFEE2DF83B8879347329F5AF2A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -130,49 +130,49 @@
 			);
 			name = K3Pinyin;
 			productName = K3Pinyin;
-			productReference = 4F9821432041391600CDAB85 /* K3Pinyin.framework */;
+			productReference = 8FBBDD12540F91D55D83F991E7723D66 /* K3Pinyin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4F98214B2041391600CDAB85 /* K3PinyinTests */ = {
+		ADF10BC3EE7891B528E72D97B9E36497 /* K3PinyinTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F98215A2041391600CDAB85 /* Build configuration list for PBXNativeTarget "K3PinyinTests" */;
+			buildConfigurationList = 92C2064376E8B99F33543512C681D6B4 /* Build configuration list for PBXNativeTarget "K3PinyinTests" */;
 			buildPhases = (
-				4F9821482041391600CDAB85 /* Sources */,
-				4F9821492041391600CDAB85 /* Frameworks */,
-				4F98214A2041391600CDAB85 /* Resources */,
+				6CA6C66488829B225FB4784F144D4D48 /* Sources */,
+				9BA11A871F60021361C5404BCB58BF43 /* Frameworks */,
+				9F3B9A60734E2615933B7A1F04093BD3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4F98214F2041391600CDAB85 /* PBXTargetDependency */,
+				3314A69AEF8BC6D7F85EFB0F4F4E4CE9 /* PBXTargetDependency */,
 			);
 			name = K3PinyinTests;
 			productName = K3PinyinTests;
-			productReference = 4F98214C2041391600CDAB85 /* K3PinyinTests.xctest */;
+			productReference = 9E6147BF13C474D35C12A003CD5F635A /* K3PinyinTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F98213A2041391600CDAB85 /* Project object */ = {
+		8EC45AB8EEB4A0550DED5014B87BC572 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Crazy凡";
 				TargetAttributes = {
-					4F9821422041391600CDAB85 = {
+					049E2D7F061A1FAC026D89D8C801A46A = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
-					4F98214B2041391600CDAB85 = {
+					ADF10BC3EE7891B528E72D97B9E36497 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 4F98213D2041391600CDAB85 /* Build configuration list for PBXProject "K3Pinyin" */;
+			buildConfigurationList = 13C5E7E5E57C336D934C36F1748EBBD6 /* Build configuration list for PBXProject "K3Pinyin" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -180,28 +180,28 @@
 				en,
 				Base,
 			);
-			mainGroup = 4F9821392041391600CDAB85;
-			productRefGroup = 4F9821442041391600CDAB85 /* Products */;
+			mainGroup = C80B4D2A982AE97B063F3B9B164C86BE;
+			productRefGroup = 9025CBF996ACA2F574BDF0A57578C787 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F9821422041391600CDAB85 /* K3Pinyin */,
-				4F98214B2041391600CDAB85 /* K3PinyinTests */,
+				049E2D7F061A1FAC026D89D8C801A46A /* K3Pinyin */,
+				ADF10BC3EE7891B528E72D97B9E36497 /* K3PinyinTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F9821412041391600CDAB85 /* Resources */ = {
+		72E917DFEE2DF83B8879347329F5AF2A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F52086020416845003C7F95 /* LICENSE in Resources */,
-				4F52085F20416845003C7F95 /* README.md in Resources */,
+				C8C65417587FB73CF93A0CB1BA072D69 /* LICENSE in Resources */,
+				AA95D512B5BD2704F488B224F4D8C41D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F98214A2041391600CDAB85 /* Resources */ = {
+		9F3B9A60734E2615933B7A1F04093BD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,36 +211,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F98213E2041391600CDAB85 /* Sources */ = {
+		5CD5C825A74E900296B28D5BA06ABAFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F98215E2041392300CDAB85 /* K3Pinyin.swift in Sources */,
-				A989174720B2CA1700A20772 /* K3Compatible.swift in Sources */,
+				5EE3B1573F9ED159DFBEDFFE97B7F008 /* K3Compatible.swift in Sources */,
+				469B158BB8A913845DE4431A35436598 /* K3Pinyin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F9821482041391600CDAB85 /* Sources */ = {
+		6CA6C66488829B225FB4784F144D4D48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F9821522041391600CDAB85 /* K3PinyinTests.swift in Sources */,
-				4F9821602041399400CDAB85 /* TestCase.swift in Sources */,
+				5B094CAA4846820BA64415CDAB148B6A /* K3PinyinTests.swift in Sources */,
+				5F3138003DEA6B11842CC407E7E9DD6B /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4F98214F2041391600CDAB85 /* PBXTargetDependency */ = {
+		3314A69AEF8BC6D7F85EFB0F4F4E4CE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4F9821422041391600CDAB85 /* K3Pinyin */;
-			targetProxy = 4F98214E2041391600CDAB85 /* PBXContainerItemProxy */;
+			target = 049E2D7F061A1FAC026D89D8C801A46A /* K3Pinyin */;
+			targetProxy = C913CDA8B162625790FA54185D388A58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4F9821552041391600CDAB85 /* Debug */ = {
+		A886A3DA06FE22C05A50DDD9A3DDB0B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -300,7 +300,7 @@
 			};
 			name = Debug;
 		};
-		4F9821562041391600CDAB85 /* Release */ = {
+		10DB10A497EB13828381FFE20E877CCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -353,7 +353,7 @@
 			};
 			name = Release;
 		};
-		4F9821582041391600CDAB85 /* Debug */ = {
+		B8CA428422EC6BEFF2FF3410AAC5B558 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -377,7 +377,7 @@
 			};
 			name = Debug;
 		};
-		4F9821592041391600CDAB85 /* Release */ = {
+		89E465109C20DCF7645FF5F0BEB9ADB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -400,7 +400,7 @@
 			};
 			name = Release;
 		};
-		4F98215B2041391600CDAB85 /* Debug */ = {
+		CE03580BD52EFE2EF71C57866CF41BCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -415,7 +415,7 @@
 			};
 			name = Debug;
 		};
-		4F98215C2041391600CDAB85 /* Release */ = {
+		84E39BBF926EF3DCEB1AB1912F628D46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -433,34 +433,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F98213D2041391600CDAB85 /* Build configuration list for PBXProject "K3Pinyin" */ = {
+		13C5E7E5E57C336D934C36F1748EBBD6 /* Build configuration list for PBXProject "K3Pinyin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F9821552041391600CDAB85 /* Debug */,
-				4F9821562041391600CDAB85 /* Release */,
+				A886A3DA06FE22C05A50DDD9A3DDB0B8 /* Debug */,
+				10DB10A497EB13828381FFE20E877CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F9821572041391600CDAB85 /* Build configuration list for PBXNativeTarget "K3Pinyin" */ = {
+		EF55FDFF5F0A33E673882113EE016484 /* Build configuration list for PBXNativeTarget "K3Pinyin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F9821582041391600CDAB85 /* Debug */,
-				4F9821592041391600CDAB85 /* Release */,
+				B8CA428422EC6BEFF2FF3410AAC5B558 /* Debug */,
+				89E465109C20DCF7645FF5F0BEB9ADB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F98215A2041391600CDAB85 /* Build configuration list for PBXNativeTarget "K3PinyinTests" */ = {
+		92C2064376E8B99F33543512C681D6B4 /* Build configuration list for PBXNativeTarget "K3PinyinTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F98215B2041391600CDAB85 /* Debug */,
-				4F98215C2041391600CDAB85 /* Release */,
+				CE03580BD52EFE2EF71C57866CF41BCF /* Debug */,
+				84E39BBF926EF3DCEB1AB1912F628D46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4F98213A2041391600CDAB85 /* Project object */;
+	rootObject = 8EC45AB8EEB4A0550DED5014B87BC572 /* Project object */;
 }
