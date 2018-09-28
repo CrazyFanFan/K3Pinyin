@@ -1,0 +1,40 @@
+included:
+  - K3Pinyin
+  - K3PinyinTests
+excluded:
+disabled_rules:
+  - sorted_imports
+  - vertical_parameter_alignment
+  - object_literal
+  - private_over_fileprivate
+  - multiple_closures_with_trailing_closure
+  - file_header
+  - identifier_name
+opt_in_rules:
+  - explicit_init
+  - empty_count
+  - closure_spacing
+  - overridden_super_call
+  - redundant_nil_coalescing
+  - private_outlet
+  - nimble_operator
+  - attributes
+  - operator_usage_whitespace
+  - closure_end_indentation
+  - first_where
+  - number_separator
+  - prohibited_super_call
+  - fatal_error_message
+
+file_length: 650
+line_length: 140
+function_body_length: 100
+type_body_length: 300
+cyclomatic_complexity: 15
+force_cast: warning
+function_parameter_count: 5
+identifier_name:
+  min_length: 1
+number_separator:
+  minimum_length: 5
+large_tuple: 3
