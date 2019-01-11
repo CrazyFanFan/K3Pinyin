@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import K3Base
 
 public extension K3Base where BaseType == String {
     var pinyin: String {

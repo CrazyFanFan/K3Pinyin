@@ -1,0 +1,24 @@
+PODS:
+  - K3Base (0.0.2)
+  - K3Pinyin (0.0.3):
+    - K3Base
+
+DEPENDENCIES:
+  - K3Base (= 0.0.2)
+  - K3Pinyin (from `./`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - K3Base
+
+EXTERNAL SOURCES:
+  K3Pinyin:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  K3Base: 3a375f3ea20dd30acaeba3b4dcf4405986521fe8
+  K3Pinyin: bde87818965d6e23b1887f006005191469a07c2c
+
+PODFILE CHECKSUM: 19d8dcd0fa99f07851fd04ecf0cf115ce1f8f028
+
+COCOAPODS: 1.5.3

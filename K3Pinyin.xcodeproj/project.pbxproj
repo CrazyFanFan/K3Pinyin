@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431EA616ABD42A137F6166977FBE4B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F913A1BA73CE35483CED6146194E78 /* Assets.xcassets */; };
 		469B158BB8A913845DE4431A35436598 /* K3Pinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927922B2F4076CCE9B28908A16F658EB /* K3Pinyin.swift */; };
 		5B094CAA4846820BA64415CDAB148B6A /* K3PinyinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C7217CC3A90ADB7003F9E583781C3 /* K3PinyinTests.swift */; };
-		5EE3B1573F9ED159DFBEDFFE97B7F008 /* K3Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B073D6F4D631586B67DE777361379 /* K3Compatible.swift */; };
 		5F3138003DEA6B11842CC407E7E9DD6B /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C5CE5F514DDBDF7890D05E541CA45 /* TestCase.swift */; };
+		727139B42178D58BE6CF13E6502C2980 /* libPods-K3PinyinTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF34FA8218C02BCAA366C8168057DFD6 /* libPods-K3PinyinTests.a */; };
+		7381D43B8336C94999EC61660DB031B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6D6BF777361FF4C9BDE7FFC6E064 /* AppDelegate.swift */; };
+		9113A02E89341513322CC3B84CCBCBE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EFCA811AE0030405D443FD162356FA /* ViewController.swift */; };
 		93D9D208190A83DC40DDFD1DE3F863F1 /* K3Pinyin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBBDD12540F91D55D83F991E7723D66 /* K3Pinyin.framework */; };
 		A3B61A7BA00A14119BCD7D50A21D62E3 /* K3Pinyin.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B34D5F66CF37A6E7B3039D79ECD22E6 /* K3Pinyin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA95D512B5BD2704F488B224F4D8C41D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 319FBF1A979F26C4365C7FDEC7384D47 /* README.md */; };
+		AFD9AEF0CEA65D62A899E16ED39F368A /* libPods-K3PinyinDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB75EA1E17E825C133A82DDAF2A6707 /* libPods-K3PinyinDemo.a */; };
+		C450406615094E0B037CB2DF69C37F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF8860D4FFF8E4BEB9EE7D124DC6657 /* LaunchScreen.storyboard */; };
 		C8C65417587FB73CF93A0CB1BA072D69 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A205DB31509FC94E991ECFF014F3A2F2 /* LICENSE */; };
+		CF286856125DB3F35ABFEB8598E11C94 /* libPods-K3Pinyin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAC4D85C5057328E390ECCD87E45B14 /* libPods-K3Pinyin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,16 +34,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075FFF3987572BC3BF0B146B3667AC62 /* K3PinyinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = K3PinyinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13EA6D6BF777361FF4C9BDE7FFC6E064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19070914A3090A52FDB95660B5F08399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B34D5F66CF37A6E7B3039D79ECD22E6 /* K3Pinyin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = K3Pinyin.h; sourceTree = "<group>"; };
+		2B4C3DE941A561149C2C1A2E320E15E1 /* Pods-K3Pinyin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3Pinyin.release.xcconfig"; path = "Pods/Target Support Files/Pods-K3Pinyin/Pods-K3Pinyin.release.xcconfig"; sourceTree = "<group>"; };
 		319FBF1A979F26C4365C7FDEC7384D47 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		552B073D6F4D631586B67DE777361379 /* K3Compatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K3Compatible.swift; sourceTree = "<group>"; };
+		3A9A21EBC04A507F4CF63AD2E77AFEDC /* Pods-K3Pinyin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3Pinyin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K3Pinyin/Pods-K3Pinyin.debug.xcconfig"; sourceTree = "<group>"; };
+		4A82346A19A1DB87455EA984FFB7BED5 /* Pods-K3PinyinDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3PinyinDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-K3PinyinDemo/Pods-K3PinyinDemo.release.xcconfig"; sourceTree = "<group>"; };
+		552741BE17C6105B2803A3BD03234056 /* K3Pinyin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = K3Pinyin.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5FA789DDFE8EAAECA18D30A4980A9BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FB75EA1E17E825C133A82DDAF2A6707 /* libPods-K3PinyinDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-K3PinyinDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AAC4D85C5057328E390ECCD87E45B14 /* libPods-K3Pinyin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-K3Pinyin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85EFCA811AE0030405D443FD162356FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8FBBDD12540F91D55D83F991E7723D66 /* K3Pinyin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = K3Pinyin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927922B2F4076CCE9B28908A16F658EB /* K3Pinyin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K3Pinyin.swift; sourceTree = "<group>"; };
 		9E6147BF13C474D35C12A003CD5F635A /* K3PinyinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = K3PinyinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A205DB31509FC94E991ECFF014F3A2F2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A2C866E427AF82CF6D10BA018E87A73C /* Pods-K3PinyinDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3PinyinDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K3PinyinDemo/Pods-K3PinyinDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A43DF2CA0F1B18B452F5F9601D9C6A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0F913A1BA73CE35483CED6146194E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D67C7217CC3A90ADB7003F9E583781C3 /* K3PinyinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K3PinyinTests.swift; sourceTree = "<group>"; };
+		D6B897B0A0DEA72D30235448B7F6DB95 /* Pods-K3PinyinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3PinyinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-K3PinyinTests/Pods-K3PinyinTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF50D4278B03BFBFB771967754788E4B /* Pods-K3PinyinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K3PinyinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K3PinyinTests/Pods-K3PinyinTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1C5CE5F514DDBDF7890D05E541CA45 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		FF34FA8218C02BCAA366C8168057DFD6 /* libPods-K3PinyinTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-K3PinyinTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA18F5A1191D858D94E7AF883AF3D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +67,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF286856125DB3F35ABFEB8598E11C94 /* libPods-K3Pinyin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CACFFC793474FE3AE87012AD7517BFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD9AEF0CEA65D62A899E16ED39F368A /* libPods-K3PinyinDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +84,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				93D9D208190A83DC40DDFD1DE3F863F1 /* K3Pinyin.framework in Frameworks */,
+				727139B42178D58BE6CF13E6502C2980 /* libPods-K3PinyinTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C9E39C9D147FFC2A4E4F66F9DD0BA0B /* K3PinyinDemo */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6D6BF777361FF4C9BDE7FFC6E064 /* AppDelegate.swift */,
+				D0F913A1BA73CE35483CED6146194E78 /* Assets.xcassets */,
+				5FA789DDFE8EAAECA18D30A4980A9BC2 /* Info.plist */,
+				EFF8860D4FFF8E4BEB9EE7D124DC6657 /* LaunchScreen.storyboard */,
+				85EFCA811AE0030405D443FD162356FA /* ViewController.swift */,
+			);
+			path = K3PinyinDemo;
+			sourceTree = "<group>";
+		};
+		195999709153C166945A72EAAA57362E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AAC4D85C5057328E390ECCD87E45B14 /* libPods-K3Pinyin.a */,
+				6FB75EA1E17E825C133A82DDAF2A6707 /* libPods-K3PinyinDemo.a */,
+				FF34FA8218C02BCAA366C8168057DFD6 /* libPods-K3PinyinTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4811CDB7709E1E2ADD432743BDD033A7 /* K3PinyinTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,18 +127,36 @@
 			isa = PBXGroup;
 			children = (
 				8FBBDD12540F91D55D83F991E7723D66 /* K3Pinyin.framework */,
+				075FFF3987572BC3BF0B146B3667AC62 /* K3PinyinDemo.app */,
 				9E6147BF13C474D35C12A003CD5F635A /* K3PinyinTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BE39364EBE2A8A6958D5D76F40E470F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A21EBC04A507F4CF63AD2E77AFEDC /* Pods-K3Pinyin.debug.xcconfig */,
+				2B4C3DE941A561149C2C1A2E320E15E1 /* Pods-K3Pinyin.release.xcconfig */,
+				A2C866E427AF82CF6D10BA018E87A73C /* Pods-K3PinyinDemo.debug.xcconfig */,
+				4A82346A19A1DB87455EA984FFB7BED5 /* Pods-K3PinyinDemo.release.xcconfig */,
+				DF50D4278B03BFBFB771967754788E4B /* Pods-K3PinyinTests.debug.xcconfig */,
+				D6B897B0A0DEA72D30235448B7F6DB95 /* Pods-K3PinyinTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C80B4D2A982AE97B063F3B9B164C86BE = {
 			isa = PBXGroup;
 			children = (
+				195999709153C166945A72EAAA57362E /* Frameworks */,
 				D1C0BEC6BBC23D215184B68C81CF5EEF /* K3Pinyin */,
+				0C9E39C9D147FFC2A4E4F66F9DD0BA0B /* K3PinyinDemo */,
 				4811CDB7709E1E2ADD432743BDD033A7 /* K3PinyinTests */,
 				A205DB31509FC94E991ECFF014F3A2F2 /* LICENSE */,
+				BE39364EBE2A8A6958D5D76F40E470F1 /* Pods */,
 				9025CBF996ACA2F574BDF0A57578C787 /* Products */,
+				552741BE17C6105B2803A3BD03234056 /* K3Pinyin.podspec */,
 				319FBF1A979F26C4365C7FDEC7384D47 /* README.md */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				19070914A3090A52FDB95660B5F08399 /* Info.plist */,
-				552B073D6F4D631586B67DE777361379 /* K3Compatible.swift */,
 				2B34D5F66CF37A6E7B3039D79ECD22E6 /* K3Pinyin.h */,
 				927922B2F4076CCE9B28908A16F658EB /* K3Pinyin.swift */,
 			);
@@ -119,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF55FDFF5F0A33E673882113EE016484 /* Build configuration list for PBXNativeTarget "K3Pinyin" */;
 			buildPhases = (
+				0E692BD154DA50ECD3C6D536EE86A6B8 /* [CP] Check Pods Manifest.lock */,
 				5CD5C825A74E900296B28D5BA06ABAFA /* Sources */,
 				186571A1371AE466C2B5D6EE8960356C /* Frameworks */,
 				AD0E3AC3273DFD011FE96D3B5302C834 /* Headers */,
@@ -134,10 +205,29 @@
 			productReference = 8FBBDD12540F91D55D83F991E7723D66 /* K3Pinyin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		AB4DFA3D3FE158527BB4574FA5C0353C /* K3PinyinDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86A863DEB5461C3E68FC1828D0A3234B /* Build configuration list for PBXNativeTarget "K3PinyinDemo" */;
+			buildPhases = (
+				D5363FE3DF7DEC1B82F0A19CC70C3056 /* [CP] Check Pods Manifest.lock */,
+				21A6482246F2FCEBA2F9D2311C21D6C9 /* Sources */,
+				4CACFFC793474FE3AE87012AD7517BFC /* Frameworks */,
+				98AADEBBD18141A6E15174B51203468D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = K3PinyinDemo;
+			productName = K3PinyinDemo;
+			productReference = 075FFF3987572BC3BF0B146B3667AC62 /* K3PinyinDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		ADF10BC3EE7891B528E72D97B9E36497 /* K3PinyinTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92C2064376E8B99F33543512C681D6B4 /* Build configuration list for PBXNativeTarget "K3PinyinTests" */;
 			buildPhases = (
+				4C7E065F54B6DF5DF1DF1CF6D8E260DC /* [CP] Check Pods Manifest.lock */,
 				6CA6C66488829B225FB4784F144D4D48 /* Sources */,
 				9BA11A871F60021361C5404BCB58BF43 /* Frameworks */,
 				9F3B9A60734E2615933B7A1F04093BD3 /* Resources */,
@@ -158,13 +248,17 @@
 		8EC45AB8EEB4A0550DED5014B87BC572 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Crazy凡";
 				TargetAttributes = {
 					049E2D7F061A1FAC026D89D8C801A46A = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+					};
+					AB4DFA3D3FE158527BB4574FA5C0353C = {
+						CreatedOnToolsVersion = 10.1;
 						ProvisioningStyle = Automatic;
 					};
 					ADF10BC3EE7891B528E72D97B9E36497 = {
@@ -189,6 +283,7 @@
 			targets = (
 				049E2D7F061A1FAC026D89D8C801A46A /* K3Pinyin */,
 				ADF10BC3EE7891B528E72D97B9E36497 /* K3PinyinTests */,
+				AB4DFA3D3FE158527BB4574FA5C0353C /* K3PinyinDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +298,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		98AADEBBD18141A6E15174B51203468D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				431EA616ABD42A137F6166977FBE4B11 /* Assets.xcassets in Resources */,
+				C450406615094E0B037CB2DF69C37F0B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9F3B9A60734E2615933B7A1F04093BD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +317,72 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E692BD154DA50ECD3C6D536EE86A6B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-K3Pinyin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C7E065F54B6DF5DF1DF1CF6D8E260DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-K3PinyinTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5363FE3DF7DEC1B82F0A19CC70C3056 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-K3PinyinDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D8A36819433738DE81904B6D7F751275 /* Swift lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,11 +405,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		21A6482246F2FCEBA2F9D2311C21D6C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7381D43B8336C94999EC61660DB031B7 /* AppDelegate.swift in Sources */,
+				9113A02E89341513322CC3B84CCBCBE3 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CD5C825A74E900296B28D5BA06ABAFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE3B1573F9ED159DFBEDFFE97B7F008 /* K3Compatible.swift in Sources */,
 				469B158BB8A913845DE4431A35436598 /* K3Pinyin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +440,17 @@
 			targetProxy = C913CDA8B162625790FA54185D388A58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFF8860D4FFF8E4BEB9EE7D124DC6657 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A43DF2CA0F1B18B452F5F9601D9C6A5E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		10DB10A497EB13828381FFE20E877CCC /* Release */ = {
@@ -319,10 +508,31 @@
 			};
 			name = Release;
 		};
+		716FA7DA38D3D353B788EC4716D3B7F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A82346A19A1DB87455EA984FFB7BED5 /* Pods-K3PinyinDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV88ACAAR6;
+				INFOPLIST_FILE = K3PinyinDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.com.K3PinyinDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		84E39BBF926EF3DCEB1AB1912F628D46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B897B0A0DEA72D30235448B7F6DB95 /* Pods-K3PinyinTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAH45WPA2T;
 				INFOPLIST_FILE = K3PinyinTests/Info.plist;
@@ -336,7 +546,9 @@
 		};
 		89E465109C20DCF7645FF5F0BEB9ADB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B4C3DE941A561149C2C1A2E320E15E1 /* Pods-K3Pinyin.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -421,7 +633,9 @@
 		};
 		B8CA428422EC6BEFF2FF3410AAC5B558 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9A21EBC04A507F4CF63AD2E77AFEDC /* Pods-K3Pinyin.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -445,13 +659,35 @@
 		};
 		CE03580BD52EFE2EF71C57866CF41BCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF50D4278B03BFBFB771967754788E4B /* Pods-K3PinyinTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAH45WPA2T;
 				INFOPLIST_FILE = K3PinyinTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazyfan.K3PinyinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D508FBE2405904B62A68401CFFAEAD64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2C866E427AF82CF6D10BA018E87A73C /* Pods-K3PinyinDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV88ACAAR6;
+				INFOPLIST_FILE = K3PinyinDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.com.K3PinyinDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +702,15 @@
 			buildConfigurations = (
 				A886A3DA06FE22C05A50DDD9A3DDB0B8 /* Debug */,
 				10DB10A497EB13828381FFE20E877CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86A863DEB5461C3E68FC1828D0A3234B /* Build configuration list for PBXNativeTarget "K3PinyinDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D508FBE2405904B62A68401CFFAEAD64 /* Debug */,
+				716FA7DA38D3D353B788EC4716D3B7F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

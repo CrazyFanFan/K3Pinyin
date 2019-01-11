@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name    = "K3Pinyin"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
   s.summary = "a simple wap to use pinyin with swift."
 
   s.description = <<-DESC
@@ -13,7 +13,8 @@ Pod::Spec.new do |s|
   s.author    = { "Crazy凡" => "kongkk@fxiaoke.com" }
   s.platform  = :ios, "8.0"
   s.source    = { :git => "https://github.com/CrazyFanFan/K3Pinyin.git", :tag => "#{s.version}" }
-  s.source_files  = "K3Pinyin/*"
+  s.source_files  = "K3Pinyin/**/*.{h,swift}"
   s.requires_arc  = true
-  s.static_framework  =  true
+  
+  s.dependency 'K3Base'
 end
