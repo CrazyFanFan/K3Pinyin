@@ -1,10 +1,10 @@
 PODS:
-  - K3Base (0.0.2)
-  - K3Pinyin (0.0.3):
+  - K3Base (0.0.4)
+  - K3Pinyin (0.0.4):
     - K3Base
 
 DEPENDENCIES:
-  - K3Base (= 0.0.2)
+  - K3Base (= 0.0.4)
   - K3Pinyin (from `./`)
 
 SPEC REPOS:
@@ -16,9 +16,9 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  K3Base: 3a375f3ea20dd30acaeba3b4dcf4405986521fe8
-  K3Pinyin: bde87818965d6e23b1887f006005191469a07c2c
+  K3Base: 1e689b3e1ec725368ba2c25881de13d576702242
+  K3Pinyin: 3f46639b1bf099dfa33b97af9268e71891f8bc53
 
-PODFILE CHECKSUM: 19d8dcd0fa99f07851fd04ecf0cf115ce1f8f028
+PODFILE CHECKSUM: e2e4a526d3b5bf6807450580c31ddb959850b4ae
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

@@ -16,16 +16,15 @@ public extension K3Base where BaseType == String {
 
     func pinyin(_ options: K3PinyinOptions?) -> String {
 
-        // swiftlint:disable empty_count
-        guard base.count > 0 else {
+        guard !base.isEmpty else {
             return ""
         }
-        // swiftlint:enable empty_count
 
-        let DEFAULT_SEPARATOR = ""
+        let defaultSeparator = ""
+        let systemDefaultSeparator = " "
 
         let cases = options ?? []
-        let source = (cases.onlyFirstCharacter || cases.onlyFirstLetter ? "\(base.first!)" : base)
+        let source = (cases.onlyFirstCharacter || cases.onlyFirstLetter ? "\(base.prefix(1))" : base)
 
         let cfString = CFStringCreateMutableCopy(nil, 0, source as CFString)
         CFStringTransform(cfString, nil, kCFStringTransformToLatin, false)
@@ -37,25 +36,25 @@ public extension K3Base where BaseType == String {
         var result: String = cfString! as String
 
         guard options != nil else {
-            return result.replacingOccurrences(of: " ", with: DEFAULT_SEPARATOR)
+            return result.replacingOccurrences(of: systemDefaultSeparator, with: defaultSeparator)
         }
 
         if cases.onlyFirstLetter {
-            result = "\(result.first!)"
+            result = result.isEmpty ? "" : "\(result.prefix(1))"
         }
 
         if cases.capitalized {
             result = result.capitalized
         }
 
-        let separator = cases.separator ?? DEFAULT_SEPARATOR
+        let separator = cases.separator ?? defaultSeparator
 
         if cases.allFirstLetter {
-            result = result.split(separator: " ")
-                .map { "\($0.first!)" }
+            result = result.split(separator: Character(systemDefaultSeparator))
+                .compactMap { $0.prefix(1) }
                 .joined(separator: separator)
         } else {
-            result = result.replacingOccurrences(of: " ", with: separator)
+            result = result.replacingOccurrences(of: systemDefaultSeparator, with: separator)
         }
 
         return result
