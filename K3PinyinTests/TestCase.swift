@@ -8,7 +8,7 @@
 
 import Foundation
 
-//swiftlint:disable line_length
+// swiftlint:disable line_length
 let testPinyinMap: [String: String] = ["A": "啊阿吖嗄腌锕錒",
                                      "Ai": "爱矮挨哎碍癌艾唉哀蔼隘埃皑呆嗌嫒瑷暧捱砹嗳锿霭乂乃伌僾儗凒剀剴叆呃呝啀嘊噫噯堨塧壒奇娭娾嬡嵦愛懓懝敱敳昹曖欬欸毐溰溾濭烠焥璦皚皧瞹硋磑礙絠薆藹諰譪譺賹躷醷鎄鑀閡阂阨阸隑靄靉餲馤騃鯦鱫鴱崖",
                                      "An": "按安暗岸俺案鞍氨胺厂庵揞犴铵桉谙鹌埯黯侒儑匼厈咹唵啽垵垾堓婩媕屽峖干晻洝玵痷盒盦盫碪罯腤荌菴萻葊蓭裺誝諳豻貋遃鉗銨錌钳闇陰隂隌雸鞌韽頇頞顸馣鮟鴳鵪鶕",
@@ -484,4 +484,4 @@ let testPinyinMap: [String: String] = ["A": "啊阿吖嗄腌锕錒",
                                      "Zui": "最嘴醉罪堆咀觜蕞厜嗺噿嫢嶉嶊嶵摧撮晬朘枠栬槯樶檇檌欈濢璻睟祽稡穝絊纗羧脧蟕辠酔酨酻鋷錊雋",
                                      "Zun": "尊遵鳟撙樽僎僔噂墫奠嶟拵捘捽栫瀳繜罇袸譐跧踆蹲銌鐏鱒鶎鷷",
                                      "Zuo": "做作坐左座昨凿琢撮佐笮酢唑祚胙怍阼柞乍侳咗岝岞挫捽柮椊砟秨稓筰糳繓苲莋葃葄蓙袏諎醋鈼鑿飵嘬阝"]
-//swiftlint:enable line_length
+// swiftlint:enable line_length

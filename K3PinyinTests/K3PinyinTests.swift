@@ -10,7 +10,6 @@ import XCTest
 @testable import K3Pinyin
 
 class K3PinyinTests: XCTestCase {
-
     let string: NSString = "中国"
 
     override func setUp() {

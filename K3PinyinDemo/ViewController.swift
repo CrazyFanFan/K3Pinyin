@@ -10,7 +10,6 @@ import UIKit
 import K3Pinyin
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,4 +21,3 @@ class ViewController: UIViewController {
         print("“\(china)“没有音的标拼音是：\(china.k3.pinyin([.stripCombiningMarks]))")
     }
 }
-
