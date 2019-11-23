@@ -8,34 +8,38 @@
 
 import Foundation
 
+public let defaultSeparator = ""
+private let systemDefaultSeparator = " "
+
 public extension K3Pinyin where BaseType == String {
     var pinyin: String {
         return pinyin(nil)
     }
 
     func pinyin(_ options: K3PinyinOptions?) -> String {
-        guard !base.isEmpty else {
-            return ""
-        }
-
-        let defaultSeparator = ""
-        let systemDefaultSeparator = " "
+        // skip empty string
+        guard !base.isEmpty else { return "" }
 
         let cases = options ?? []
+
+        // get only first char when case onlyFirst...
         let source = (cases.onlyFirstCharacter || cases.onlyFirstLetter ? "\(base.prefix(1))" : base)
 
+        // get pinyin
         let cfString = CFStringCreateMutableCopy(nil, 0, source as CFString)
         CFStringTransform(cfString, nil, kCFStringTransformToLatin, false)
 
+        // just replace `Separator` if options is nil
+        guard options != nil else {
+            return (cfString! as String).replacingOccurrences(of: systemDefaultSeparator, with: defaultSeparator)
+        }
+
+        // string combining marks
         if cases.stripCombiningMarks {
             CFStringTransform(cfString, nil, kCFStringTransformStripCombiningMarks, false)
         }
 
         var result: String = cfString! as String
-
-        guard options != nil else {
-            return result.replacingOccurrences(of: systemDefaultSeparator, with: defaultSeparator)
-        }
 
         if cases.onlyFirstLetter {
             if let char = result.first {

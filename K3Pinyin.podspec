@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author    = { "Crazy凡" => "827799383@qq.com" }
   s.platform  = :ios, "8.0"
   s.source    = { :git => "https://github.com/CrazyFanFan/K3Pinyin.git", :tag => "#{s.version}" }
-  s.source_files  = "K3Pinyin/**/*.{h,swift}"
+  s.source_files  = "Sources/**/*.{swift}"
   s.requires_arc  = true
   s.swift_version = '5.0'
 end
