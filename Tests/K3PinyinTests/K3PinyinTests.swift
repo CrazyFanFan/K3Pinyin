@@ -24,15 +24,15 @@ class K3PinyinTests: XCTestCase {
 
     // 和一个拼音库的资源进行对比，校验正确率，部分多音字Case无法通过
     func testExample() {
-//        for (pinyin, str) in testPinyinMap {
-//            autoreleasepool(invoking: {
-//                for char in str {
-//                    autoreleasepool(invoking: {
-//                        XCTAssertEqual(pinyin.lowercased(), "\(char)".k3.pinyin([.stripCombiningMarks]), "\(char)")
-//                    })
-//                }
-//            })
-//        }
+        //        for (pinyin, str) in testPinyinMap {
+        //            autoreleasepool(invoking: {
+        //                for char in str {
+        //                    autoreleasepool(invoking: {
+        //                        XCTAssertEqual(pinyin.lowercased(), "\(char)".k3.pinyin([.stripCombiningMarks]), "\(char)")
+        //                    })
+        //                }
+        //            })
+        //        }
     }
 
     // 将全部字符进行一次取拼音操作，测试下性能
@@ -40,8 +40,12 @@ class K3PinyinTests: XCTestCase {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
-//            print(testPinyinMap.description.k3.pinyin)
+            _ = testPinyinMap.description.k3.pinyin
         }
+    }
+
+    func testPinyin() {
+        XCTAssertEqual(string.k3.pinyin, "zhōngguó")
     }
 
     func testNilOption() {
@@ -332,12 +336,12 @@ class K3PinyinTests: XCTestCase {
             "onlyFirstLetter",
             "capitalized"]
 
-        let combs = combination(options)
-        for comb in combs {
+        let combinations = combination(options)
+        for combination in combinations {
             print(
                 """
-                func test\(comb.map { $0.capitalized }.joined())() {
-                XCTAssertEqual(string.k3.pinyin([.\(comb.joined(separator: ", ."))]), "")
+                func test\(combination.map { $0.capitalized }.joined())() {
+                XCTAssertEqual(string.k3.pinyin([.\(combination.joined(separator: ", ."))]), "")
                 }
 
                 """
@@ -346,21 +350,49 @@ class K3PinyinTests: XCTestCase {
     }
 
     func testCombination() {
-        let t = combination([1, 2, 3, 4, 5])
-        print(t)
+        XCTAssertEqual(
+            combination([1, 2, 3, 4, 5]),
+            [
+                [1],
+                [1, 2],
+                [1, 2, 3],
+                [1, 2, 3, 4],
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 5],
+                [1, 2, 4],
+                [1, 2, 4, 5],
+                [1, 2, 5],
+                [1, 3],
+                [1, 3, 4],
+                [1, 3, 4, 5],
+                [1, 3, 5],
+                [1, 4],
+                [1, 4, 5],
+                [1, 5],
+                [2],
+                [2, 3],
+                [2, 3, 4],
+                [2, 3, 4, 5],
+                [2, 3, 5],
+                [2, 4],
+                [2, 4, 5],
+                [2, 5],
+                [3],
+                [3, 4],
+                [3, 4, 5],
+                [3, 5],
+                [4],
+                [4, 5],
+                [5]
+            ]
+        )
     }
 
     private func combination<T>(_ items: [T]) -> [[T]] {
-        if items.count == 1 {
-            return [items]
-        }
+        guard items.count > 1 else { return [items] }
 
-        let moreCom = combination(Array(items[1...]))
+        let nextLevel = combination(Array(items[1...]))
 
-        return ([[items[0]]] + moreCom.map { (singleCom) -> [T] in
-            var temCom = Array(singleCom)
-            temCom.insert(items[0], at: 0)
-            return temCom
-        } + moreCom)
+        return [[items[0]]] + nextLevel.map { [items[0]] + $0 } + nextLevel
     }
 }

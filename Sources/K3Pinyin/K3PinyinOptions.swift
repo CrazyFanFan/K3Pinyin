@@ -26,7 +26,8 @@ precedencegroup OptionComparisonPrecedence {
 
 infix operator <==>: OptionComparisonPrecedence
 
-// This operator returns true if two `K3PinyinOption` enum is the same, without considering the associated values.
+/// This operator returns true if two `K3PinyinOption` enum is the same,
+/// without considering the associated values.
 func <==> (lhs: K3PinyinOption, rhs: K3PinyinOption) -> Bool {
     switch (lhs, rhs) {
     case (.stripCombiningMarks, .stripCombiningMarks): return true
