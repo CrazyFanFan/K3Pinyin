@@ -23,7 +23,10 @@ public extension K3Pinyin where BaseType == String {
         let cases = options ?? []
 
         // get only first char when case onlyFirst...
-        let source = (cases.onlyFirstCharacter || cases.onlyFirstLetter ? "\(base.prefix(1))" : base)
+        var source = base
+        if cases.onlyFirstCharacter || cases.onlyFirstLetter {
+            source = String(base.prefix(1))
+        }
 
         // get pinyin
         let cfString = CFStringCreateMutableCopy(nil, 0, source as CFString)

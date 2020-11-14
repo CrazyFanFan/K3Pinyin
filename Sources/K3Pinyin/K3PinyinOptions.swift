@@ -10,7 +10,7 @@ import Foundation
 
 public typealias K3PinyinOptions = [K3PinyinOption]
 
-public enum K3PinyinOption {
+public enum K3PinyinOption: Equatable {
     case stripCombiningMarks
     case separator(String)
     case onlyFirstCharacter
@@ -19,53 +19,30 @@ public enum K3PinyinOption {
     case capitalized
 }
 
-precedencegroup OptionComparisonPrecedence {
-    associativity: none
-    higherThan: LogicalConjunctionPrecedence
-}
-
-infix operator <==>: OptionComparisonPrecedence
-
-/// This operator returns true if two `K3PinyinOption` enum is the same,
-/// without considering the associated values.
-func <==> (lhs: K3PinyinOption, rhs: K3PinyinOption) -> Bool {
-    switch (lhs, rhs) {
-    case (.stripCombiningMarks, .stripCombiningMarks): return true
-    case (.separator, .separator): return true
-    case (.onlyFirstCharacter, .onlyFirstCharacter): return true
-    case (.allFirstLetter, .allFirstLetter): return true
-    case (.onlyFirstLetter, .onlyFirstLetter): return true
-    case (.capitalized, .capitalized): return true
-    default: return false
-    }
-}
-
 public extension Collection where Iterator.Element == K3PinyinOption {
-    var stripCombiningMarks: Bool {
-        return contains { $0 <==> .stripCombiningMarks }
-    }
+    @inlinable
+    var stripCombiningMarks: Bool { contains(.stripCombiningMarks) }
 
     var separator: String? {
-        if let item = reversed().first(where: { $0 <==> .separator("") }),
-            case .separator(let separator) = item {
-            return separator
+        for option in reversed() {
+            switch option {
+            case .separator(let separator):
+                return separator
+            default: break
+            }
         }
         return nil
     }
 
-    var onlyFirstCharacter: Bool {
-        return contains { $0 <==> .onlyFirstCharacter }
-    }
+    @inlinable
+    var onlyFirstCharacter: Bool { contains(.onlyFirstCharacter) }
 
-    var allFirstLetter: Bool {
-        return contains { $0 <==> .allFirstLetter }
-    }
+    @inlinable
+    var allFirstLetter: Bool { contains(.allFirstLetter) }
 
-    var onlyFirstLetter: Bool {
-        return contains { $0 <==> .onlyFirstLetter }
-    }
+    @inlinable
+    var onlyFirstLetter: Bool { contains(.onlyFirstLetter) }
 
-    var capitalized: Bool {
-        return contains { $0 <==> .capitalized }
-    }
+    @inlinable
+    var capitalized: Bool { contains(.capitalized) }
 }

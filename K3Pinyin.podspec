@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name    = "K3Pinyin"
-  s.version = "1.0.0"
+  s.version = "2.0.0"
   s.summary = "a simple wap to use pinyin with swift."
 
   s.description = <<-DESC
@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.source    = { :git => "https://github.com/CrazyFanFan/K3Pinyin.git", :tag => "#{s.version}" }
   s.source_files  = "Sources/**/*.{swift}"
   s.requires_arc  = true
-  s.swift_version = '5.0'
+  s.swift_version = '5.3'
 end
