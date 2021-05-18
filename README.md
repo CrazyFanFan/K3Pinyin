@@ -54,6 +54,6 @@ Then, run the following command:
 - Polyphone
 
 ## Author
-crazy凡, [ccrazyfan@gmail.com](mailto:ccrazyfan@gmail.com)
+Crazy凡, [ccrazyfan@gmail.com](mailto:ccrazyfan@gmail.com)
 ## License
 K3Pinyin is released under the MIT license. See [LICENSE](https://github.com/CrazyFanFan/K3Pinyin/blob/master/LICENSE) for details.
