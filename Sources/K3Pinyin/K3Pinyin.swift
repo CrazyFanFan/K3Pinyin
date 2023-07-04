@@ -12,8 +12,9 @@ public let defaultSeparator = ""
 private let systemDefaultSeparator = " "
 
 public extension K3Pinyin where BaseType == String {
+    @inlinable
     var pinyin: String {
-        return pinyin(nil)
+        pinyin(nil)
     }
 
     func pinyin(_ options: K3PinyinOptions?) -> String {
@@ -69,20 +70,41 @@ public extension K3Pinyin where BaseType == String {
         return result
     }
 
+    @inlinable
     func pinyin(_ options: K3PinyinOptions?, completion: @escaping (_ pinyin: String) -> Void) {
         completion(pinyin(options))
     }
 }
 
 public extension K3Pinyin where BaseType == NSString {
+    @inlinable
     var pinyin: String {
-        return pinyin(nil)
+        pinyin(nil)
     }
 
+    @inlinable
     func pinyin(_ options: K3PinyinOptions?) -> String {
-        return (base as String).k3.pinyin(options)
+        (base as String).k3.pinyin(options)
     }
 
+    @inlinable
+    func pinyin(_ options: K3PinyinOptions?, completion: @escaping (_ pinyin: String) -> Void) {
+        completion(pinyin(options))
+    }
+}
+
+public extension K3Pinyin where BaseType == Substring {
+    @inlinable
+    var pinyin: String {
+        pinyin(nil)
+    }
+
+    @inlinable
+    func pinyin(_ options: K3PinyinOptions?) -> String {
+        String(base).k3.pinyin(options)
+    }
+
+    @inlinable
     func pinyin(_ options: K3PinyinOptions?, completion: @escaping (_ pinyin: String) -> Void) {
         completion(pinyin(options))
     }
@@ -90,3 +112,5 @@ public extension K3Pinyin where BaseType == NSString {
 
 extension String: K3PinyinCompatible {}
 extension NSString: K3PinyinCompatible {}
+extension Substring: K3PinyinCompatible {}
+

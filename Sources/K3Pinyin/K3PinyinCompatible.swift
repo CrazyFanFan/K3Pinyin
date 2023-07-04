@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class K3Pinyin<BaseType> {
+public struct K3Pinyin<BaseType> {
     public var base: BaseType
     init(_ base: BaseType) {
         self.base = base

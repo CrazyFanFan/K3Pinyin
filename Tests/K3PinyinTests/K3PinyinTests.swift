@@ -10,7 +10,7 @@ import XCTest
 @testable import K3Pinyin
 
 class K3PinyinTests: XCTestCase {
-    let string: NSString = "中国"
+    let string: String = "中国"
 
     override func setUp() {
         super.setUp()
@@ -325,6 +325,12 @@ class K3PinyinTests: XCTestCase {
 
     func testMakeTestCase() {
         makeTestCase()
+    }
+
+    func testSubstring() {
+        XCTAssertEqual(string[string.startIndex...].k3.pinyin([.capitalized]), "ZhōngGuó")
+        XCTAssertEqual(string[...string.startIndex].k3.pinyin([.capitalized]), "Zhōng")
+        XCTAssertEqual(string[string.index(before: string.endIndex)...].k3.pinyin([.capitalized]), "Guó")
     }
 
     private func makeTestCase() {
